@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shoe Wash — Mlotshwa Trading Corporations</title>
+  <meta name="description" content="Professional shoe cleaning, restoration and care in Durban. We bring your favourite footwear back to life — sneakers, leather, suede and more." />
+  <link rel="icon" type="image/png" href="Logo.png" />
+
+  <meta property="og:title" content="Shoe Wash — Mlotshwa Trading Corporations" />
+  <meta property="og:description" content="Fresh kicks, every time." />
+  <meta property="og:image" content="images/logo.png" />
+
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/animations.css" />
+</head>
+<body>
+
+  <!-- ============ HEADER ============ -->
+  <header class="navbar">
+    <div class="container nav-inner">
+      <a href="index.html" class="logo">
+        <img src="Logo.png" alt="Mlotshwa Trading Co." />
+        <span class="logo-text">
+          <span>MLOTSHWA</span>
+          <span>Trading Co.</span>
+        </span>
+      </a>
+      <nav>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="businesses.html" class="active">Businesses</a></li>
+          <li><a href="news.html">News</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ============ ANIMATED HERO ============ -->
+  <section class="business-hero" style="background: linear-gradient(135deg, #2563eb 0%, #1e40af 100%);">
+    <canvas id="heroCanvas" data-color="147, 197, 253"></canvas>
+    <div class="container">
+      <span class="business-badge">A Mlotshwa Trading Company</span>
+      <h1>Shoe Wash</h1>
+      <p class="business-tagline">Fresh kicks, every time.</p>
+    </div>
+  </section>
+
+  <!-- ============ BREADCRUMB ============ -->
+  <div class="breadcrumb">
+    <div class="container">
+      <a href="index.html">Home</a> <span>/</span>
+      <a href="businesses.html">Businesses</a> <span>/</span>
+      <span>Shoe Wash</span>
+    </div>
+  </div>
+
+  <!-- ============ OVERVIEW ============ -->
+  <section class="section">
+    <div class="container narrow reveal">
+      <h2 class="section-subtitle" style="margin-top:0;">Overview</h2>
+      <p class="lead">
+        Shoe Wash is a professional cleaning and restoration service
+        dedicated to bringing your favourite footwear back to life.
+        Whether they're everyday sneakers, work shoes, or treasured
+        favourites — we treat every pair with care.
+      </p>
+      <p>
+        Using safe, effective cleaning methods, we remove dirt, stains, and
+        odours while preserving your shoes' colour, shape, and material.
+        From canvas and mesh to leather, suede, and synthetics — no job is
+        too tough, and no pair is too precious.
+      </p>
+    </div>
+  </section>
+
+  <!-- ============ STATS STRIP ============ -->
+  <section class="section section-alt">
+    <div class="container">
+      <div class="grid grid-3">
+        <div class="highlight reveal float-anim" style="text-align:center;">
+          <h3 style="font-size:2.4rem; margin-bottom:0.5rem;">
+            <span data-count="500">0</span>+
+          </h3>
+          <p>Pairs cleaned and restored</p>
+        </div>
+        <div class="highlight reveal float-anim" style="animation-delay:0.4s; text-align:center;">
+          <h3 style="font-size:2.4rem; margin-bottom:0.5rem;">
+            <span data-count="48">0</span>h
+          </h3>
+          <p>Typical turnaround time</p>
+        </div>
+        <div class="highlight reveal float-anim" style="animation-delay:0.8s; text-align:center;">
+          <h3 style="font-size:2.4rem; margin-bottom:0.5rem;">
+            <span data-count="100">0</span>%
+          </h3>
+          <p>Safe for all materials</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SERVICES ============ -->
+  <section class="section">
+    <div class="container">
+      <div class="section-title reveal">
+        <h2>What We Offer</h2>
+        <p class="section-subtitle">Complete care for every pair</p>
+      </div>
+      <div class="grid grid-3">
+
+        <div class="service-card reveal tilt-card">
+          <div class="service-icon" style="background:#2563eb; display:flex; align-items:center; justify-content:center; font-size:1.8rem; color:white;">🧼</div>
+          <h3>Deep Cleaning</h3>
+          <p>Thorough cleaning that removes dirt, stains, and odours from the inside out — using safe, professional-grade solutions.</p>
+        </div>
+
+        <div class="service-card reveal tilt-card">
+          <div class="service-icon" style="background:#2563eb; display:flex; align-items:center; justify-content:center; font-size:1.8rem; color:white;">✨</div>
+          <h3>Restoration</h3>
+          <p>Bring worn shoes back to their best condition. We revive colour, reshape soles, and repair small damage.</p>
+        </div>
+
+        <div class="service-card reveal tilt-card">
+          <div class="service-icon" style="background:#2563eb; display:flex; align-items:center; justify-content:center; font-size:1.8rem; color:white;">🛡️</div>
+          <h3>Care &amp; Protection</h3>
+          <p>Stain-guard and weather-proof treatments that extend the life of your footwear and keep them looking newer for longer.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PROCESS ============ -->
+  <section class="section section-alt">
+    <div class="container">
+      <div class="section-title reveal">
+        <h2>Our Process</h2>
+        <p class="section-subtitle">From drop-off to fresh kicks — in four steps</p>
+      </div>
+      <div class="grid grid-4" style="display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:1.5rem;">
+
+        <div class="highlight reveal" style="text-align:center;">
+          <div style="width:60px;height:60px;border-radius:50%;background:#2563eb;color:white;display:flex;align-items:center;justify-content:center;font-size:1.6rem;font-weight:800;margin:0 auto 1rem;">1</div>
+          <h3>Drop Off</h3>
+          <p>Bring your shoes in, or arrange a pickup. We log every pair carefully.</p>
+        </div>
+
+        <div class="highlight reveal" style="text-align:center; transition-delay:0.15s;">
+          <div style="width:60px;height:60px;border-radius:50%;background:#2563eb;color:white;display:flex;align-items:center;justify-content:center;font-size:1.6rem;font-weight:800;margin:0 auto 1rem;">2</div>
+          <h3>Assess</h3>
+          <p>We inspect materials, damage, and stains — then choose the right treatment.</p>
+        </div>
+
+        <div class="highlight reveal" style="text-align:center; transition-delay:0.3s;">
+          <div style="width:60px;height:60px;border-radius:50%;background:#2563eb;color:white;display:flex;align-items:center;justify-content:center;font-size:1.6rem;font-weight:800;margin:0 auto 1rem;">3</div>
+          <h3>Clean</h3>
+          <p>Deep clean, restore, and protect — using methods tailored to each shoe.</p>
+        </div>
+
+        <div class="highlight reveal" style="text-align:center; transition-delay:0.45s;">
+          <div style="width:60px;height:60px;border-radius:50%;background:#2563eb;color:white;display:flex;align-items:center;justify-content:center;font-size:1.6rem;font-weight:800;margin:0 auto 1rem;">4</div>
+          <h3>Collect</h3>
+          <p>Pick up your fresh-looking shoes — ready to wear again.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ WHY CHOOSE ============ -->
+  <section class="section">
+    <div class="container">
+      <div class="section-title reveal">
+        <h2>Why Choose Shoe Wash</h2>
+      </div>
+      <div class="grid grid-3">
+
+        <div class="highlight reveal float-anim">
+          <h3>✨ Like New</h3>
+          <p>Results that make your shoes look brand new — not just cleaner.</p>
+        </div>
+
+        <div class="highlight reveal float-anim" style="animation-delay:0.4s;">
+          <h3>⏱️ Fast Turnaround</h3>
+          <p>Quick service so you're not left waiting. Most pairs ready within 48 hours.</p>
+        </div>
+
+        <div class="highlight reveal float-anim" style="animation-delay:0.8s;">
+          <h3>👟 All Materials</h3>
+          <p>Safe for leather, suede, canvas, mesh, and synthetics — we know each material.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ WE CARE FOR ============ -->
+  <section class="section section-alt">
+    <div class="container">
+      <div class="section-title reveal">
+        <h2>We Care For</h2>
+        <p class="section-subtitle">Whatever you wear, we've handled it before</p>
+      </div>
+      <div class="grid grid-4" style="display:grid; grid-template-columns:repeat(auto-fit,minmax(160px,1fr)); gap:1rem;">
+
+        <div class="highlight reveal" style="text-align:center;">
+          <div style="font-size:2.4rem; margin-bottom:0.5rem;">👟</div>
+          <h3 style="font-size:1.05rem;">Sneakers</h3>
+        </div>
+
+        <div class="highlight reveal" style="text-align:center;">
+          <div style="font-size:2.4rem; margin-bottom:0.5rem;">👞</div>
+          <h3 style="font-size:1.05rem;">Leather Shoes</h3>
+        </div>
+
+        <div class="highlight reveal" style="text-align:center;">
+          <div style="font-size:2.4rem; margin-bottom:0.5rem;">🥾</div>
+          <h3 style="font-size:1.05rem;">Boots</h3>
+        </div>
+
+        <div class="highlight reveal" style="text-align:center;">
+          <div style="font-size:2.4rem; margin-bottom:0.5rem;">👠</div>
+          <h3 style="font-size:1.05rem;">Heels</h3>
+        </div>
+
+        <div class="highlight reveal" style="text-align:center;">
+          <div style="font-size:2.4rem; margin-bottom:0.5rem;">🩴</div>
+          <h3 style="font-size:1.05rem;">Sandals</h3>
+        </div>
+
+        <div class="highlight reveal" style="text-align:center;">
+          <div style="font-size:2.4rem; margin-bottom:0.5rem;">🎒</div>
+          <h3 style="font-size:1.05rem;">School Shoes</h3>
+        </div>
+
+        <div class="highlight reveal" style="text-align:center;">
+          <div style="font-size:2.4rem; margin-bottom:0.5rem;">💎</div>
+          <h3 style="font-size:1.05rem;">Designer Kicks</h3>
+        </div>
+
+        <div class="highlight reveal" style="text-align:center;">
+          <div style="font-size:2.4rem; margin-bottom:0.5rem;">🏃</div>
+          <h3 style="font-size:1.05rem;">Running Shoes</h3>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CONTACT INFO BOX ============ -->
+  <section class="section">
+    <div class="container narrow reveal">
+      <div class="info-box" style="border-left-color:#2563eb;">
+        <h3>Drop Off or Enquire</h3>
+        <p><strong>Location:</strong> Durban, South Africa</p>
+        <p><strong>Phone:</strong> 066 568 6336</p>
+        <p><strong>Email:</strong> thandolwethumlotshwa6@gmail.com</p>
+        <p style="margin-top:0.5rem; color:#64748b; font-size:0.9rem;">
+          Book your drop-off, or message us on WhatsApp for a quick quote.
+        </p>
+        <a href="contact.html" class="btn" style="background:#2563eb; color:white; margin-top:1rem;">Contact Us →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ RELATED NEWS ============ -->
+  <section class="section section-alt">
+    <div class="container">
+      <div class="section-title reveal">
+        <h2>Latest from Shoe Wash</h2>
+      </div>
+      <div class="grid grid-2" style="display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:1.5rem;">
+
+        <a href="news.html" class="news-item reveal" style="text-decoration:none; color:inherit; display:block; padding:1.75rem; background:#fff; border:1px solid #e2e8f0; border-radius:16px;">
+          <span style="display:inline-block; background:#dbeafe; color:#1e40af; padding:0.25rem 0.7rem; border-radius:20px; font-size:0.72rem; font-weight:600; margin-bottom:0.6rem;">👟 Shoe Wash · 05 Mar 2026</span>
+          <h3 style="font-size:1.15rem; margin:0.3rem 0 0.6rem; color:#0f172a;">Shoe Wash now restores suede, leather and designer sneakers</h3>
+          <p style="color:#64748b; font-size:0.9rem; margin:0 0 0.6rem;">The team completed a certified training programme and now handles everything from school shoes to limited-edition collectibles.</p>
+          <span style="color:#2563eb; font-weight:600; font-size:0.85rem;">Read more →</span>
+        </a>
+
+        <a href="news.html" class="news-item reveal" style="text-decoration:none; color:inherit; display:block; padding:1.75rem; background:#fff; border:1px solid #e2e8f0; border-radius:16px;">
+          <span style="display:inline-block; background:#dbeafe; color:#1e40af; padding:0.25rem 0.7rem; border-radius:20px; font-size:0.72rem; font-weight:600; margin-bottom:0.6rem;">👟 Shoe Wash · 14 Feb 2026</span>
+          <h3 style="font-size:1.15rem; margin:0.3rem 0 0.6rem; color:#0f172a;">Valentine's special: bring your partner's kicks back to life</h3>
+          <p style="color:#64748b; font-size:0.9rem; margin:0 0 0.6rem;">More than 40 pairs were dropped off in three days during our two-for-one restoration weekend.</p>
+          <span style="color:#2563eb; font-weight:600; font-size:0.85rem;">Read more →</span>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ OTHER BUSINESSES ============ -->
+  <section class="section">
+    <div class="container">
+      <div class="section-title reveal">
+        <h2>Other Businesses in Our Group</h2>
+      </div>
+      <div class="grid grid-3">
+
+        <a href="business-family-trust.html" class="business-card reveal tilt-card" style="--card-color:#dc2626;">
+          <div class="business-card-color" style="background:#dc2626;">FT</div>
+          <h3>Family Trust</h3>
+          <p class="tagline">Financial support you can trust.</p>
+          <span class="learn-more" style="color:#dc2626;">Learn more →</span>
+        </a>
+
+        <a href="business-ndabezitha.html" class="business-card reveal tilt-card" style="--card-color:#64748b;">
+          <div class="business-card-color" style="background:#64748b;">NT</div>
+          <h3>Ndabezitha Transportation</h3>
+          <p class="tagline">Moving you forward.</p>
+          <span class="learn-more" style="color:#64748b;">Learn more →</span>
+        </a>
+
+        <a href="business-precious-rentals.html" class="business-card reveal tilt-card" style="--card-color:#eab308;">
+          <div class="business-card-color" style="background:#eab308;">PR</div>
+          <h3>Precious Rentals</h3>
+          <p class="tagline">Spaces that feel like home.</p>
+          <span class="learn-more" style="color:#eab308;">Learn more →</span>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div>
+        <img src="Logo.png" alt="Mlotshwa Trading Co." class="footer-logo" />
+        <h3>Mlotshwa Trading Corporations</h3>
+        <p>Building businesses that shape us to build communities.</p>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <ul>
+          <li><a href="about.html">About</a></li>
+          <li><a href="news.html">News</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Our Businesses</h4>
+        <ul>
+          <li><a href="business-family-trust.html">Family Trust</a></li>
+          <li><a href="business-shoe-wash.html">Shoe Wash</a></li>
+          <li><a href="business-ndabezitha.html">Ndabezitha Transportation</a></li>
+          <li><a href="business-precious-rentals.html">Precious Rentals</a></li>
+          <li><a href="business-banele-driving.html">Banele Driving</a></li>
+          <li><a href="business-mlotshwa-productions.html">Mlotshwa Productions</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <p>thandolwethumlotshwa6@gmail.com</p>
+        <p>066 568 6336</p>
+        <p>324 West Street, Durban</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Mlotshwa Trading Corporations. All rights reserved. · <a href="privacy.html">Privacy Policy</a></p>
+    </div>
+  </footer>
+
+  <!-- ============ WHATSAPP FLOAT ============ -->
+  <a href="https://wa.me/27665686336" class="whatsapp-float" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+    </svg>
+  </a>
+
+  <!-- ============ SCRIPTS ============ -->
+  <script>
+    (function () {
+      const toggle = document.getElementById('menuToggle');
+      const links  = document.getElementById('navLinks');
+      if (!toggle || !links) return;
+      toggle.addEventListener('click', () => links.classList.toggle('open'));
+    })();
+  </script>
+  <script src="js/business-animations.js"></script>
+</body>
+</html>

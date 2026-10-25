@@ -1,0 +1,1400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About — Mlotshwa Trading Corporations</title>
+  <meta name="description" content="Learn about Mlotshwa Trading Corporations — a family-owned group of six businesses building communities across Durban and KwaZulu-Natal." />
+  <link rel="icon" type="image/png" href="Logo.png" />
+
+  <meta property="og:title" content="About — Mlotshwa Trading Corporations" />
+  <meta property="og:description" content="Building businesses that shape us to build communities." />
+  <meta property="og:image" content="images/logo.png" />
+
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/animations.css" />
+
+  <style>
+    /* ================================================================
+       BLACK & WHITE — ABOUT PAGE
+       White header · Black footer
+       ================================================================ */
+
+    :root {
+      --bw-black: #0a0a0a;
+      --bw-ink: #111111;
+      --bw-gray-3: #6b6b6b;
+      --bw-gray-4: #a3a3a3;
+      --bw-gray-5: #d4d4d4;
+      --bw-gray-6: #f5f5f5;
+      --bw-gray-7: #fafafa;
+      --bw-white: #ffffff;
+      --bw-border: rgba(255, 255, 255, 0.14);
+      --bw-border-dark: rgba(0, 0, 0, 0.1);
+    }
+
+    body {
+      background: var(--bw-white);
+      color: var(--bw-ink);
+      font-family: system-ui, -apple-system, 'Inter', 'Segoe UI', Roboto, sans-serif;
+      margin: 0;
+    }
+
+    h1, h2, h3, h4 {
+      letter-spacing: -0.03em;
+      font-weight: 700;
+      color: var(--bw-ink);
+    }
+
+    /* ============ WHITE HEADER ============ */
+    .navbar {
+      background: var(--bw-white) !important;
+      border-bottom: 1px solid var(--bw-border-dark);
+      padding: 1.1rem 0;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .navbar .logo-text span:first-child {
+      color: var(--bw-black);
+      font-weight: 800;
+      letter-spacing: 0.02em;
+    }
+
+    .navbar .logo-text span:last-child {
+      color: var(--bw-gray-3);
+      font-weight: 400;
+      letter-spacing: 0.02em;
+    }
+
+    .navbar .nav-links a {
+      color: var(--bw-gray-3) !important;
+      font-weight: 500;
+      font-size: 0.9rem;
+      transition: color 0.25s ease;
+    }
+
+    .navbar .nav-links a:hover,
+    .navbar .nav-links a.active {
+      color: var(--bw-black) !important;
+    }
+
+    .navbar .menu-toggle span {
+      background: var(--bw-black) !important;
+    }
+
+    /* ============ HERO ============ */
+    .bw-hero {
+      background: var(--bw-black);
+      color: var(--bw-white);
+      position: relative;
+      overflow: hidden;
+      padding: 6rem 0 5rem;
+      min-height: 55vh;
+      display: flex;
+      align-items: center;
+    }
+
+    .bw-hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(255, 255, 255, 0.035) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.035) 1px, transparent 1px);
+      background-size: 80px 80px;
+      z-index: 1;
+      pointer-events: none;
+    }
+
+    .bw-hero::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at 50% 45%, transparent 15%, var(--bw-black) 82%);
+      z-index: 2;
+      pointer-events: none;
+    }
+
+    .bw-hero .container {
+      position: relative;
+      z-index: 3;
+    }
+
+    .bw-hero-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      color: var(--bw-gray-4);
+      font-size: 0.78rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      font-weight: 500;
+      margin-bottom: 1.75rem;
+    }
+
+    .bw-hero-eyebrow::before {
+      content: '';
+      width: 40px;
+      height: 1px;
+      background: var(--bw-gray-3);
+    }
+
+    .bw-hero h1 {
+      color: var(--bw-white);
+      font-size: clamp(2.4rem, 6vw, 4.2rem);
+      line-height: 1.05;
+      font-weight: 800;
+      letter-spacing: -0.045em;
+      margin: 0 0 1.25rem;
+      max-width: 16ch;
+    }
+
+    .bw-hero h1 .accent-line {
+      display: block;
+      color: var(--bw-gray-4);
+      font-weight: 300;
+      font-style: italic;
+    }
+
+    .bw-hero-tagline {
+      color: var(--bw-gray-4);
+      font-size: clamp(1rem, 1.5vw, 1.15rem);
+      line-height: 1.6;
+      max-width: 540px;
+      margin: 0;
+    }
+
+    /* ============ SECTION HEADS ============ */
+    .bw-section-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      margin-bottom: 3rem;
+      gap: 2rem;
+      flex-wrap: wrap;
+      border-bottom: 1px solid var(--bw-border-dark);
+      padding-bottom: 1.5rem;
+    }
+
+    .bw-section-head h2 {
+      font-size: clamp(1.7rem, 3.2vw, 2.4rem);
+      font-weight: 800;
+      letter-spacing: -0.035em;
+      margin: 0;
+      max-width: 24ch;
+      line-height: 1.15;
+    }
+
+    .bw-section-head .bw-count {
+      font-size: 0.75rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--bw-gray-3);
+      font-weight: 500;
+      white-space: nowrap;
+      padding-bottom: 0.5rem;
+    }
+
+    /* ============ STORY ============ */
+    .bw-story {
+      padding: 6rem 0;
+      background: var(--bw-white);
+    }
+
+    .bw-story-grid {
+      display: grid;
+      grid-template-columns: 220px 1fr;
+      gap: 4rem;
+      max-width: 1100px;
+      margin: 0 auto;
+      align-items: start;
+    }
+
+    .bw-story-label {
+      font-size: 0.75rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--bw-gray-3);
+      font-weight: 600;
+      padding-top: 0.5rem;
+    }
+
+    .bw-story-label::before {
+      content: '';
+      display: block;
+      width: 40px;
+      height: 1px;
+      background: var(--bw-black);
+      margin-bottom: 1rem;
+    }
+
+    .bw-story-text {
+      font-size: clamp(1.2rem, 2vw, 1.55rem);
+      line-height: 1.5;
+      color: var(--bw-ink);
+      font-weight: 400;
+      letter-spacing: -0.02em;
+      margin: 0 0 1.5rem;
+    }
+
+    .bw-story-text strong {
+      font-weight: 700;
+      background: linear-gradient(transparent 60%, var(--bw-gray-5) 60%);
+      padding: 0 0.15rem;
+    }
+
+    .bw-story-sub {
+      color: var(--bw-gray-3);
+      font-size: 1rem;
+      line-height: 1.75;
+      max-width: 640px;
+      margin: 0 0 1rem;
+    }
+
+    @media (max-width: 700px) {
+      .bw-story-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+      }
+    }
+
+    /* ============ STATS ============ */
+    .bw-stats {
+      background: var(--bw-black);
+      color: var(--bw-white);
+      padding: 4rem 0;
+    }
+
+    .bw-stats-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 0;
+    }
+
+    .bw-stat {
+      padding: 1.5rem 2rem;
+      border-right: 1px solid var(--bw-border);
+      text-align: center;
+    }
+
+    .bw-stat:last-child {
+      border-right: none;
+    }
+
+    .bw-stat-num {
+      font-size: clamp(2.2rem, 4.5vw, 3.2rem);
+      font-weight: 800;
+      letter-spacing: -0.04em;
+      color: var(--bw-white);
+      display: block;
+      line-height: 1;
+      margin-bottom: 0.75rem;
+      font-variant-numeric: tabular-nums;
+    }
+
+    .bw-stat-label {
+      color: var(--bw-gray-4);
+      font-size: 0.78rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      font-weight: 500;
+    }
+
+    @media (max-width: 700px) {
+      .bw-stat {
+        border-right: none;
+        border-bottom: 1px solid var(--bw-border);
+        padding: 1.5rem 0;
+      }
+      .bw-stat:last-child { border-bottom: none; }
+    }
+
+    /* ============ MISSION & VISION ============ */
+    .bw-mv {
+      padding: 6rem 0;
+      background: var(--bw-white);
+    }
+
+    .bw-mv-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0;
+      border: 1px solid var(--bw-border-dark);
+    }
+
+    .bw-mv-cell {
+      padding: 3rem 2.5rem;
+      background: var(--bw-white);
+      transition: background 0.4s ease, color 0.4s ease;
+    }
+
+    .bw-mv-cell + .bw-mv-cell {
+      border-left: 1px solid var(--bw-border-dark);
+    }
+
+    .bw-mv-cell:hover {
+      background: var(--bw-black);
+      color: var(--bw-white);
+    }
+
+    .bw-mv-num {
+      font-size: 0.7rem;
+      letter-spacing: 0.22em;
+      color: var(--bw-gray-3);
+      font-weight: 600;
+      margin-bottom: 1.5rem;
+      display: block;
+      transition: color 0.4s ease;
+    }
+
+    .bw-mv-cell:hover .bw-mv-num {
+      color: var(--bw-gray-4);
+    }
+
+    .bw-mv-cell h3 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      letter-spacing: -0.03em;
+      margin: 0 0 1rem;
+      transition: color 0.4s ease;
+    }
+
+    .bw-mv-cell:hover h3 {
+      color: var(--bw-white);
+    }
+
+    .bw-mv-cell p {
+      color: var(--bw-gray-3);
+      font-size: 1rem;
+      line-height: 1.75;
+      margin: 0;
+      transition: color 0.4s ease;
+    }
+
+    .bw-mv-cell:hover p {
+      color: var(--bw-gray-4);
+    }
+
+    @media (max-width: 800px) {
+      .bw-mv-grid {
+        grid-template-columns: 1fr;
+      }
+      .bw-mv-cell + .bw-mv-cell {
+        border-left: none;
+        border-top: 1px solid var(--bw-border-dark);
+      }
+      .bw-mv-cell { padding: 2.5rem 2rem; }
+    }
+
+    /* ============ VALUES ============ */
+    .bw-values {
+      padding: 6rem 0;
+      background: var(--bw-gray-7);
+      border-top: 1px solid var(--bw-border-dark);
+      border-bottom: 1px solid var(--bw-border-dark);
+    }
+
+    .bw-values-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 2.5rem;
+    }
+
+    .bw-value-item {
+      padding-top: 1.5rem;
+      border-top: 2px solid var(--bw-black);
+    }
+
+    .bw-value-num {
+      font-size: 0.7rem;
+      letter-spacing: 0.22em;
+      color: var(--bw-gray-3);
+      font-weight: 600;
+      display: block;
+      margin-bottom: 1rem;
+    }
+
+    .bw-value-item h3 {
+      font-size: 1.15rem;
+      font-weight: 700;
+      margin: 0 0 0.75rem;
+      letter-spacing: -0.02em;
+    }
+
+    .bw-value-item p {
+      color: var(--bw-gray-3);
+      font-size: 0.94rem;
+      line-height: 1.7;
+      margin: 0;
+    }
+
+      /* ============ FOUNDER ============ */
+    .bw-founder {
+      padding: 6rem 0;
+      background: var(--bw-white);
+    }
+
+    .bw-founder-inner {
+      max-width: 900px; /* Widened the container slightly */
+      margin: 0 auto;
+      border: 1.5px solid var(--bw-black);
+      padding: 3.5rem 3rem;
+      display: grid;
+      /* Increased to 220px to make the photo significantly larger */
+      grid-template-columns: 220px 1fr; 
+      gap: 3rem;
+      align-items: center; /* Centers the text and image vertically */
+    }
+
+    .bw-founder-img {
+      width: 100%;
+      /* Instead of a strict square, let it be a portrait rectangle */
+      aspect-ratio: 4 / 5; 
+      object-fit: cover; 
+      /* Focus on the face (top center) */
+      object-position: center 20%; 
+      border-radius: 6px; 
+      border: 1px solid var(--bw-border-dark);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.08); /* Adds a premium shadow */
+    }
+
+    .bw-founder-info h3 {
+      font-size: 1.6rem; /* Made the name slightly larger */
+      font-weight: 700;
+      letter-spacing: -0.03em;
+      margin: 0 0 0.4rem;
+    }
+
+    .bw-founder-info .role {
+      color: var(--bw-gray-3);
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      margin: 0 0 1.5rem;
+      display: block;
+    }
+
+    .bw-founder-info blockquote {
+      font-size: 1.1rem;
+      line-height: 1.7;
+      color: var(--bw-ink);
+      margin: 0;
+      font-style: normal;
+      border-left: 3px solid var(--bw-black);
+      padding-left: 1.5rem;
+    }
+
+    /* Mobile View Adjustments */
+    @media (max-width: 700px) {
+      .bw-founder-inner {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        padding: 2.5rem 1.5rem;
+        text-align: center;
+      }
+      .bw-founder-img {
+        max-width: 200px; /* Keeps it from getting too huge on mobile */
+        margin: 0 auto;
+        aspect-ratio: 1 / 1; /* Makes it a perfect square on mobile */
+        object-position: center; 
+      }
+      .bw-founder-info blockquote {
+        text-align: left;
+      }
+    }
+
+    /* ============ TIMELINE / JOURNEY ============ */
+    .bw-journey {
+      padding: 6rem 0;
+      background: var(--bw-gray-7);
+      border-top: 1px solid var(--bw-border-dark);
+      border-bottom: 1px solid var(--bw-border-dark);
+    }
+
+    .bw-timeline {
+      max-width: 780px;
+      margin: 0 auto;
+      position: relative;
+      padding-left: 2.25rem;
+    }
+
+    .bw-timeline::before {
+      content: '';
+      position: absolute;
+      left: 0.5rem;
+      top: 8px;
+      bottom: 8px;
+      width: 2px;
+      background: var(--bw-black);
+    }
+
+    .bw-timeline-item {
+      position: relative;
+      padding-bottom: 3rem;
+    }
+
+    .bw-timeline-item:last-child {
+      padding-bottom: 0;
+    }
+
+    .bw-timeline-dot {
+      position: absolute;
+      left: -2.25rem;
+      top: 4px;
+      width: 18px;
+      height: 18px;
+      background: var(--bw-white);
+      border: 3px solid var(--bw-black);
+      border-radius: 50%;
+    }
+
+    .bw-timeline-item:last-child .bw-timeline-dot {
+      background: var(--bw-black);
+    }
+
+    .bw-timeline-item .stage-num {
+      font-size: 0.7rem;
+      letter-spacing: 0.22em;
+      color: var(--bw-gray-3);
+      font-weight: 600;
+      display: block;
+      margin-bottom: 0.5rem;
+      text-transform: uppercase;
+    }
+
+    .bw-timeline-item h3 {
+      font-size: 1.25rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      margin: 0 0 0.5rem;
+    }
+
+    .bw-timeline-item .stage-sub {
+      color: var(--bw-gray-3);
+      font-size: 0.85rem;
+      font-weight: 500;
+      margin: 0 0 0.75rem;
+      letter-spacing: 0.02em;
+    }
+
+    .bw-timeline-item p {
+      color: var(--bw-gray-3);
+      font-size: 0.95rem;
+      line-height: 1.7;
+      margin: 0;
+    }
+
+    /* ============ SIX BUSINESSES ============ */
+    .bw-six {
+      padding: 6rem 0;
+      background: var(--bw-white);
+    }
+
+    .bw-six-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 0;
+      border: 1px solid var(--bw-border-dark);
+    }
+
+    .bw-six-item {
+      padding: 2rem 1.75rem;
+      background: var(--bw-white);
+      text-decoration: none;
+      color: inherit;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      min-height: 220px;
+      transition: background 0.35s ease, color 0.35s ease;
+      border-right: 1px solid var(--bw-border-dark);
+      border-bottom: 1px solid var(--bw-border-dark);
+    }
+
+    .bw-six-grid > .bw-six-item:last-child {
+      border-right: none;
+    }
+
+    .bw-six-item:hover {
+      background: var(--bw-black);
+      color: var(--bw-white);
+    }
+
+    .bw-six-num {
+      font-size: 0.7rem;
+      letter-spacing: 0.2em;
+      color: var(--bw-gray-3);
+      font-weight: 600;
+      margin-bottom: 1rem;
+      transition: color 0.35s ease;
+    }
+
+    .bw-six-item:hover .bw-six-num {
+      color: var(--bw-gray-4);
+    }
+
+    .bw-six-item h3 {
+      font-size: 1.15rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      margin: 0 0 0.6rem;
+      transition: color 0.35s ease;
+    }
+
+    .bw-six-item:hover h3 {
+      color: var(--bw-white);
+    }
+
+    .bw-six-item p {
+      color: var(--bw-gray-3);
+      font-size: 0.88rem;
+      line-height: 1.5;
+      margin: 0;
+      transition: color 0.35s ease;
+    }
+
+    .bw-six-item:hover p {
+      color: var(--bw-gray-4);
+    }
+
+    .bw-six-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: var(--bw-ink);
+      border-bottom: 1px solid currentColor;
+      padding-bottom: 0.25rem;
+      align-self: flex-start;
+      margin-top: 1.25rem;
+      transition: color 0.35s ease, gap 0.3s ease;
+    }
+
+    .bw-six-item:hover .bw-six-link {
+      color: var(--bw-white);
+      gap: 0.7rem;
+    }
+
+    @media (max-width: 700px) {
+      .bw-six-item { border-right: none; }
+    }
+
+    /* ============ CTA ============ */
+    .bw-cta {
+      padding: 7rem 0;
+      background: var(--bw-black);
+      color: var(--bw-white);
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .bw-cta::before {
+      content: '';
+      position: absolute;
+      top: -30%;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 700px;
+      height: 700px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(255, 255, 255, 0.05), transparent 70%);
+      pointer-events: none;
+    }
+
+    .bw-cta-inner {
+      position: relative;
+      z-index: 1;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    .bw-cta h2 {
+      color: var(--bw-white);
+      font-size: clamp(1.9rem, 4vw, 2.8rem);
+      font-weight: 800;
+      letter-spacing: -0.04em;
+      line-height: 1.1;
+      margin: 0 0 1rem;
+    }
+
+    .bw-cta p {
+      color: var(--bw-gray-4);
+      font-size: 1.05rem;
+      line-height: 1.6;
+      margin: 0 0 2rem;
+    }
+
+    .bw-btn-row {
+      display: flex;
+      gap: 0.85rem;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .bw-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      padding: 1rem 1.9rem;
+      font-size: 0.9rem;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+      text-decoration: none;
+      border-radius: 0;
+      transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1),
+                  background 0.3s ease,
+                  color 0.3s ease;
+      cursor: pointer;
+      border: 1.5px solid transparent;
+    }
+
+    .bw-btn-primary {
+      background: var(--bw-white);
+      color: var(--bw-black);
+    }
+
+    .bw-btn-primary:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 15px 40px rgba(255, 255, 255, 0.15);
+    }
+
+    .bw-btn-secondary {
+      background: transparent;
+      color: var(--bw-white);
+      border-color: rgba(255, 255, 255, 0.35);
+    }
+
+    .bw-btn-secondary:hover {
+      background: var(--bw-white);
+      color: var(--bw-black);
+      transform: translateY(-3px);
+      border-color: var(--bw-white);
+    }
+
+    /* ============ BLACK FOOTER ============ */
+    .footer {
+      background: var(--bw-black);
+      color: var(--bw-gray-4);
+      border-top: 1px solid var(--bw-border);
+      padding: 5rem 0 2rem;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1.2fr;
+      gap: 3rem;
+      margin-bottom: 3rem;
+    }
+
+    @media (max-width: 900px) {
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 2.5rem;
+      }
+    }
+
+    @media (max-width: 560px) {
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+   .footer-logo {
+  height: 60px;
+  width: auto;
+  margin-bottom: 1rem;
+  background: white;
+  padding: 0.6rem 0.9rem;
+  border-radius: 8px;
+  display: block;
+    }
+
+    .footer h3 {
+      color: var(--bw-white);
+      font-weight: 700;
+      font-size: 1.1rem;
+      letter-spacing: -0.02em;
+      margin: 0 0 0.75rem;
+    }
+
+    .footer h4 {
+      font-size: 0.72rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--bw-gray-4);
+      margin: 0 0 1.25rem;
+      font-weight: 600;
+    }
+
+    .footer p,
+    .footer a,
+    .footer li {
+      color: var(--bw-gray-4);
+      font-size: 0.9rem;
+      line-height: 1.7;
+    }
+
+    .footer p {
+      margin: 0 0 0.5rem;
+    }
+
+    .footer ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .footer li {
+      margin-bottom: 0.6rem;
+    }
+
+    .footer a {
+      text-decoration: none;
+      transition: color 0.25s ease, padding-left 0.25s ease;
+      display: inline-block;
+    }
+
+    .footer a:hover {
+      color: var(--bw-white);
+      padding-left: 4px;
+    }
+
+    .footer-social {
+      display: flex;
+      gap: 0.6rem;
+      margin-top: 1.25rem;
+    }
+
+    .footer-social a {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      border: 1px solid var(--bw-border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0;
+      transition: background 0.3s ease, border-color 0.3s ease, transform 0.3s ease;
+    }
+
+    .footer-social a:hover {
+      background: var(--bw-white);
+      border-color: var(--bw-white);
+      transform: translateY(-3px);
+      padding-left: 0;
+    }
+
+    .footer-social svg {
+      width: 15px;
+      height: 15px;
+      fill: var(--bw-gray-4);
+      transition: fill 0.3s ease;
+    }
+
+    .footer-social a:hover svg {
+      fill: var(--bw-black);
+    }
+
+    .footer-bottom {
+      border-top: 1px solid var(--bw-border);
+      margin-top: 2rem;
+      padding-top: 1.75rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .footer-bottom p {
+      font-size: 0.78rem;
+      color: var(--bw-gray-3);
+      margin: 0;
+      letter-spacing: 0.02em;
+    }
+
+    .footer-bottom a {
+      color: var(--bw-gray-3);
+    }
+
+    .footer-bottom a:hover {
+      color: var(--bw-white);
+      padding-left: 0;
+    }
+
+    /* ============ WhatsApp float ============ */
+    .whatsapp-float {
+      background: var(--bw-black) !important;
+      color: var(--bw-white) !important;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25) !important;
+    }
+
+    .whatsapp-float svg {
+      fill: var(--bw-white) !important;
+    }
+
+    /* ============ Reveal ============ */
+    .bw-reveal {
+      opacity: 0;
+      transform: translateY(28px);
+      transition: opacity 0.8s cubic-bezier(0.22, 1, 0.36, 1),
+                  transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+
+    .bw-reveal.is-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ============ WHITE HEADER ============ -->
+  <header class="navbar">
+    <div class="container nav-inner">
+      <a href="index.html" class="logo">
+        <img src="Logo.png" alt="Mlotshwa Trading Co." />
+        <span class="logo-text">
+          <span>MLOTSHWA</span>
+          <span>Trading Co.</span>
+        </span>
+      </a>
+      <nav>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html" class="active">About</a></li>
+          <li><a href="businesses.html">Businesses</a></li>
+          <li><a href="news.html">News</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ============ HERO ============ -->
+  <section class="bw-hero">
+    <div class="container">
+      <div class="bw-hero-eyebrow">Our Story</div>
+      <h1>
+        About Us.<br />
+        <span class="accent-line">Building communities.</span>
+      </h1>
+      <p class="bw-hero-tagline">
+        A family-owned group of six businesses rooted in Durban. Built on
+        honesty, care, and a commitment to serving the people around us.
+      </p>
+    </div>
+  </section>
+
+  <!-- ============ STORY ============ -->
+  <section class="bw-story">
+    <div class="container">
+      <div class="bw-story-grid bw-reveal">
+        <div class="bw-story-label">Our Story</div>
+        <div>
+          <p class="bw-story-text">
+            What started as a simple vision — to <strong>serve our community
+            with honesty and care</strong> — has grown into six distinct
+            ventures, each built on the same values.
+          </p>
+          <p class="bw-story-sub">
+            From financial services to creative media, from shoe care to driving
+            lessons, every business under our banner exists to solve a real need
+            for real people. We're not here to be the biggest — we're here to be
+            the most trusted.
+          </p>
+          <p class="bw-story-sub">
+            Today, we serve hundreds of customers across KwaZulu-Natal, and
+            we're just getting started.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ STATS ============ -->
+  <section class="bw-stats">
+    <div class="container">
+      <div class="bw-stats-grid bw-reveal">
+        <div class="bw-stat">
+          <span class="bw-stat-num" data-count="6">0</span>
+          <span class="bw-stat-label">Businesses</span>
+        </div>
+        <div class="bw-stat">
+          <span class="bw-stat-num" data-count="500">0</span>
+          <span class="bw-stat-label">Customers Served</span>
+        </div>
+        <div class="bw-stat">
+          <span class="bw-stat-num" data-count="1">0</span>
+          <span class="bw-stat-label">Home — Durban</span>
+        </div>
+        <div class="bw-stat">
+          <span class="bw-stat-num">100%</span>
+          <span class="bw-stat-label">Family-Owned</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ MISSION & VISION ============ -->
+  <section class="bw-mv">
+    <div class="container">
+      <div class="bw-section-head bw-reveal">
+        <h2>Mission &amp; Vision.</h2>
+        <div class="bw-count">What Drives Us</div>
+      </div>
+
+      <div class="bw-mv-grid bw-reveal">
+        <div class="bw-mv-cell">
+          <span class="bw-mv-num">01 / Mission</span>
+          <h3>To serve with heart.</h3>
+          <p>
+            To build businesses that serve our community with integrity,
+            innovation, and heart — providing quality goods and services that
+            improve everyday life for the people of Durban and KwaZulu-Natal.
+          </p>
+        </div>
+        <div class="bw-mv-cell">
+          <span class="bw-mv-num">02 / Vision</span>
+          <h3>To be the most trusted.</h3>
+          <p>
+            To become one of KwaZulu-Natal's most trusted, family-run business
+            groups — known not just for what we sell, but for how we serve,
+            who we employ, and the communities we help build.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ VALUES ============ -->
+  <section class="bw-values">
+    <div class="container">
+      <div class="bw-section-head bw-reveal">
+        <h2>Our values.</h2>
+        <div class="bw-count">Three / Three</div>
+      </div>
+
+      <div class="bw-values-grid">
+        <div class="bw-value-item bw-reveal">
+          <span class="bw-value-num">01 / Integrity</span>
+          <h3>We do what we say.</h3>
+          <p>Fair pricing, honest dealings, no shortcuts. Our word is our bond.</p>
+        </div>
+        <div class="bw-value-item bw-reveal">
+          <span class="bw-value-num">02 / Innovation</span>
+          <h3>Better ways to serve.</h3>
+          <p>New ideas, new tools, new standards — we're always looking for the next improvement.</p>
+        </div>
+        <div class="bw-value-item bw-reveal">
+          <span class="bw-value-num">03 / Community</span>
+          <h3>Home comes first.</h3>
+          <p>Our success is measured by the difference we make where it matters most — home.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FOUNDER ============ -->
+  <section class="bw-founder">
+    <div class="container">
+      <div class="bw-section-head bw-reveal">
+        <h2>Meet the founder.</h2>
+        <div class="bw-count">Behind the Vision</div>
+      </div>
+
+      <div class="bw-founder-inner bw-reveal">
+        <!-- REPLACED AVATAR WITH IMAGE -->
+        <img src="founder.png" alt="Thandolwethu Mlotshwa" class="bw-founder-img" />
+        
+        <div class="bw-founder-info">
+          <h3>Thandolwethu Mlotshwa</h3>
+          <span class="role">Founder &amp; Director</span>
+          <blockquote>
+            "I started Mlotshwa Trading Corporations with a simple belief — that
+            a business can be both successful and genuinely good for the people
+            it serves. Every venture we've built comes back to that idea. If we
+            do right by our community, everything else follows."
+          </blockquote>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ TIMELINE ============ -->
+  <section class="bw-journey">
+    <div class="container">
+      <div class="bw-section-head bw-reveal">
+        <h2>Our journey.</h2>
+        <div class="bw-count">Five Milestones</div>
+      </div>
+
+      <div class="bw-timeline">
+
+        <div class="bw-timeline-item bw-reveal">
+          <div class="bw-timeline-dot"></div>
+          <span class="stage-num">Stage 01 — The Beginning</span>
+          <h3>Mlotshwa Trading Corporations is founded.</h3>
+          <p class="stage-sub">Where it all started</p>
+          <p>A vision to serve the local community through honest, family-run businesses takes root in Durban.</p>
+        </div>
+
+        <div class="bw-timeline-item bw-reveal">
+          <div class="bw-timeline-dot"></div>
+          <span class="stage-num">Stage 02 — Growing Roots</span>
+          <h3>Family Trust &amp; Shoe Wash launch.</h3>
+          <p class="stage-sub">The first two businesses open</p>
+          <p>Financial services for families and professional shoe care for the community — the group's foundation is built.</p>
+        </div>
+
+        <div class="bw-timeline-item bw-reveal">
+          <div class="bw-timeline-dot"></div>
+          <span class="stage-num">Stage 03 — Expanding Reach</span>
+          <h3>Transportation &amp; Rentals join.</h3>
+          <p class="stage-sub">Ndabezitha and Precious Rentals launch</p>
+          <p>Ndabezitha Transportation and Precious Rentals expand the group's footprint across KwaZulu-Natal.</p>
+        </div>
+
+        <div class="bw-timeline-item bw-reveal">
+          <div class="bw-timeline-dot"></div>
+          <span class="stage-num">Stage 04 — Skills &amp; Stories</span>
+          <h3>Driving school &amp; media house.</h3>
+          <p class="stage-sub">Banele Driving and Mlotshwa Productions join</p>
+          <p>Driver education and creative storytelling complete the group — six businesses, one family.</p>
+        </div>
+
+        <div class="bw-timeline-item bw-reveal">
+          <div class="bw-timeline-dot"></div>
+          <span class="stage-num">Stage 05 — Today &amp; Beyond</span>
+          <h3>Still building.</h3>
+          <p class="stage-sub">The next chapter</p>
+          <p>Six businesses, hundreds of customers, and a vision that keeps growing. We're proud of what we've built — and excited for what's next.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SIX BUSINESSES ============ -->
+  <section class="bw-six">
+    <div class="container">
+      <div class="bw-section-head bw-reveal">
+        <h2>The six businesses.</h2>
+        <div class="bw-count">Six / Six</div>
+      </div>
+
+      <div class="bw-six-grid">
+
+        <a href="business-family-trust.html" class="bw-six-item bw-reveal">
+          <div>
+            <div class="bw-six-num">01 / Financial</div>
+            <h3>Family Trust</h3>
+            <p>Fast, fair financial support for families and small businesses.</p>
+          </div>
+          <span class="bw-six-link">Visit →</span>
+        </a>
+
+        <a href="business-shoe-wash.html" class="bw-six-item bw-reveal">
+          <div>
+            <div class="bw-six-num">02 / Shoe Care</div>
+            <h3>Shoe Wash</h3>
+            <p>Professional cleaning, restoration, and protection for footwear.</p>
+          </div>
+          <span class="bw-six-link">Visit →</span>
+        </a>
+
+        <a href="business-ndabezitha.html" class="bw-six-item bw-reveal">
+          <div>
+            <div class="bw-six-num">03 / Transport</div>
+            <h3>Ndabezitha Transportation</h3>
+            <p>Freight, courier, and passenger transport across KZN.</p>
+          </div>
+          <span class="bw-six-link">Visit →</span>
+        </a>
+
+        <a href="business-precious-rentals.html" class="bw-six-item bw-reveal">
+          <div>
+            <div class="bw-six-num">04 / Property</div>
+            <h3>Precious Rentals</h3>
+            <p>Residential and commercial rental properties in Durban.</p>
+          </div>
+          <span class="bw-six-link">Visit →</span>
+        </a>
+
+        <a href="business-banele-driving.html" class="bw-six-item bw-reveal">
+          <div>
+            <div class="bw-six-num">05 / Education</div>
+            <h3>Banele Driving</h3>
+            <p>Driving lessons and K53 test preparation.</p>
+          </div>
+          <span class="bw-six-link">Visit →</span>
+        </a>
+
+        <a href="business-mlotshwa-productions.html" class="bw-six-item bw-reveal">
+          <div>
+            <div class="bw-six-num">06 / Creative</div>
+            <h3>Mlotshwa Productions</h3>
+            <p>Videography, photography, and creative media production.</p>
+          </div>
+          <span class="bw-six-link">Visit →</span>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CTA ============ -->
+  <section class="bw-cta">
+    <div class="bw-cta-inner">
+      <h2>Want to work with us?</h2>
+      <p>Whether you need a service, a partner, or just a chat — we're one message away.</p>
+      <div class="bw-btn-row">
+        <a href="contact.html" class="bw-btn bw-btn-primary">
+          Get in Touch <span>→</span>
+        </a>
+        <a href="businesses.html" class="bw-btn bw-btn-secondary">
+          Browse Businesses
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ BLACK FOOTER ============ -->
+  <footer class="footer">
+    <div class="container footer-grid">
+
+      <div>
+        <img src="Logo.png" alt="Mlotshwa Trading Co." class="footer-logo" />
+        <h3>Mlotshwa Trading Corporations</h3>
+        <p>Building businesses that shape us to build communities. Six ventures, one vision — proudly rooted in Durban, KwaZulu-Natal.</p>
+
+        <div class="footer-social">
+          <a href="#" aria-label="Facebook" title="Facebook">
+            <svg viewBox="0 0 24 24"><path d="M22 12a10 10 0 1 0-11.56 9.87v-6.99H7.9V12h2.54V9.8c0-2.51 1.5-3.89 3.78-3.89 1.1 0 2.24.2 2.24.2v2.46H15.2c-1.24 0-1.63.77-1.63 1.56V12h2.77l-.44 2.88h-2.33v6.99A10 10 0 0 0 22 12z"/></svg>
+          </a>
+          <a href="#" aria-label="Instagram" title="Instagram">
+            <svg viewBox="0 0 24 24"><path d="M12 2.16c3.2 0 3.58.01 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.25-2.23-.41a3.7 3.7 0 0 1-1.38-.9 3.7 3.7 0 0 1-.9-1.38c-.16-.42-.36-1.06-.41-2.23C2.17 15.58 2.16 15.2 2.16 12s.01-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41C8.42 2.17 8.8 2.16 12 2.16zm0 3.68A6.16 6.16 0 1 0 18.16 12 6.16 6.16 0 0 0 12 5.84zm0 10.16A4 4 0 1 1 16 12a4 4 0 0 1-4 4zm6.4-10.4a1.44 1.44 0 1 1-1.44-1.44 1.44 1.44 0 0 1 1.44 1.44z"/></svg>
+          </a>
+          <a href="#" aria-label="LinkedIn" title="LinkedIn">
+            <svg viewBox="0 0 24 24"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9h4v12H3V9zm7 0h3.8v1.7h.05a4.17 4.17 0 0 1 3.75-2.06c4 0 4.75 2.64 4.75 6.08V21h-4v-5.5c0-1.31-.03-3-1.83-3s-2.12 1.43-2.12 2.9V21h-4V9z"/></svg>
+          </a>
+          <a href="https://wa.me/27665686336" aria-label="WhatsApp" title="WhatsApp" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div>
+        <h4>Company</h4>
+        <ul>
+          <li><a href="about.html">About</a></li>
+          <li><a href="news.html">News</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4>Our Businesses</h4>
+        <ul>
+          <li><a href="business-family-trust.html">Family Trust</a></li>
+          <li><a href="business-shoe-wash.html">Shoe Wash</a></li>
+          <li><a href="business-ndabezitha.html">Ndabezitha Transportation</a></li>
+          <li><a href="business-precious-rentals.html">Precious Rentals</a></li>
+          <li><a href="business-banele-driving.html">Banele Driving</a></li>
+          <li><a href="business-mlotshwa-productions.html">Mlotshwa Productions</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4>Contact</h4>
+        <p>thandolwethumlotshwa6@gmail.com</p>
+        <p>066 568 6336</p>
+        <p>324 West Street, Durban</p>
+      </div>
+
+    </div>
+
+    <div class="container footer-bottom">
+      <p>© 2026 Mlotshwa Trading Corporations. All rights reserved. · <a href="privacy.html">Privacy Policy</a></p>
+      <p>Built in Durban, KwaZulu-Natal 🇿🇦</p>
+    </div>
+  </footer>
+
+  <!-- ============ WHATSAPP FLOAT ============ -->
+  <a href="https://wa.me/27665686336" class="whatsapp-float" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+    </svg>
+  </a>
+
+  <!-- ============ SCRIPTS ============ -->
+  <script>
+    /* Menu toggle */
+    (function () {
+      const toggle = document.getElementById('menuToggle');
+      const links  = document.getElementById('navLinks');
+      if (!toggle || !links) return;
+      toggle.addEventListener('click', () => links.classList.toggle('open'));
+    })();
+
+    /* Scroll reveal */
+    (function () {
+      const els = document.querySelectorAll('.bw-reveal');
+      if (!els.length) return;
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry, i) => {
+          if (entry.isIntersecting) {
+            setTimeout(() => {
+              entry.target.classList.add('is-visible');
+            }, i * 80);
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.12 });
+
+      els.forEach(el => observer.observe(el));
+    })();
+
+    /* Animated counters */
+    (function () {
+      const counters = document.querySelectorAll('[data-count]');
+      if (!counters.length) return;
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const el = entry.target;
+            const target = parseInt(el.dataset.count, 10);
+            let current = 0;
+            const step = target / 50;
+            const timer = setInterval(() => {
+              current += step;
+              if (current >= target) {
+                current = target;
+                clearInterval(timer);
+              }
+              el.textContent = Math.floor(current);
+            }, 16);
+            observer.unobserve(el);
+          }
+        });
+      }, { threshold: 0.5 });
+
+      counters.forEach(el => observer.observe(el));
+    })();
+  </script>
+  <script src="js/business-animations.js"></script>
+</body>
+</html>

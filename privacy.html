@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy — Mlotshwa Trading Corporations</title>
+  <meta name="description" content="How Mlotshwa Trading Corporations collects, uses, and protects your personal information. POPIA-compliant privacy policy." />
+  <link rel="icon" type="image/png" href="Logo.png" />
+
+  <meta property="og:title" content="Privacy Policy — Mlotshwa Trading Corporations" />
+  <meta property="og:description" content="How we protect your personal information." />
+  <meta property="og:image" content="images/logo.png" />
+
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/animations.css" />
+
+  <style>
+    /* ==================================================
+       PRIVACY PAGE — DOCS-STYLE LAYOUT
+       ================================================== */
+
+    /* Smooth scroll for TOC anchor jumps, with offset for navbar */
+    html {
+      scroll-behavior: smooth;
+    }
+
+    .policy-section {
+      scroll-margin-top: 100px;
+    }
+
+    /* Two-column layout: sidebar + content */
+    .policy-layout {
+      display: grid;
+      grid-template-columns: 240px 1fr;
+      gap: 3rem;
+      align-items: start;
+      max-width: 1080px;
+      margin: 0 auto;
+    }
+
+    /* ===== Sidebar ===== */
+    .policy-toc {
+      position: sticky;
+      top: 100px;
+      font-size: 0.9rem;
+      max-height: calc(100vh - 120px);
+      overflow-y: auto;
+      padding-right: 0.5rem;
+    }
+
+    /* Custom subtle scrollbar for the sidebar */
+    .policy-toc::-webkit-scrollbar {
+      width: 4px;
+    }
+    .policy-toc::-webkit-scrollbar-track {
+      background: transparent;
+    }
+    .policy-toc::-webkit-scrollbar-thumb {
+      background: #cbd5e1;
+      border-radius: 4px;
+    }
+
+    .policy-toc h3 {
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: #94a3b8;
+      font-weight: 700;
+      margin: 0 0 1rem;
+      padding-left: 0.75rem;
+    }
+
+    .policy-toc ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      position: relative;
+    }
+
+    /* Vertical line on the left of TOC */
+    .policy-toc ul::before {
+      content: '';
+      position: absolute;
+      left: 0.75rem;
+      top: 6px;
+      bottom: 6px;
+      width: 1px;
+      background: #e2e8f0;
+    }
+
+    .policy-toc li {
+      margin: 0;
+    }
+
+    .policy-toc a {
+      display: block;
+      padding: 0.45rem 0.75rem 0.45rem 1.5rem;
+      color: #64748b;
+      text-decoration: none;
+      font-size: 0.85rem;
+      line-height: 1.4;
+      border-radius: 6px;
+      position: relative;
+      transition: color 0.2s ease, background 0.2s ease;
+    }
+
+    .policy-toc a:hover {
+      color: #2563eb;
+      background: #f1f5f9;
+    }
+
+    /* Active state — highlighted item */
+    .policy-toc a.active {
+      color: #2563eb;
+      font-weight: 600;
+      background: #eff6ff;
+    }
+
+    .policy-toc a.active::before {
+      content: '';
+      position: absolute;
+      left: 0.75rem;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 3px;
+      height: 18px;
+      background: #2563eb;
+      border-radius: 3px;
+    }
+
+    /* ===== Main content column ===== */
+    .policy-content {
+      min-width: 0;
+    }
+
+    .policy-meta {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      padding: 1.1rem 1.35rem;
+      background: #f8fafc;
+      border-left: 3px solid #2563eb;
+      border-radius: 10px;
+      margin-bottom: 2.25rem;
+      font-size: 0.85rem;
+      color: #475569;
+      line-height: 1.55;
+    }
+
+    .policy-meta strong {
+      color: #0f172a;
+      font-weight: 600;
+    }
+
+    .policy-intro {
+      font-size: 1.02rem;
+      color: #334155;
+      line-height: 1.8;
+      margin-bottom: 2.5rem;
+    }
+
+    .policy-intro p + p {
+      margin-top: 1rem;
+    }
+
+    .policy-section {
+      margin-bottom: 3rem;
+      padding-top: 0.25rem;
+    }
+
+    .policy-section h2 {
+      font-size: 1.35rem;
+      font-weight: 700;
+      color: #0f172a;
+      margin: 0 0 1rem;
+      letter-spacing: -0.015em;
+      line-height: 1.3;
+    }
+
+    .policy-section h2 .num {
+      color: #2563eb;
+      font-weight: 800;
+      margin-right: 0.4rem;
+    }
+
+    .policy-section p,
+    .policy-section li {
+      color: #475569;
+      line-height: 1.75;
+      font-size: 0.97rem;
+    }
+
+    .policy-section p + p {
+      margin-top: 0.85rem;
+    }
+
+    .policy-section ul {
+      padding-left: 1.25rem;
+      margin: 0.9rem 0;
+    }
+
+    .policy-section li {
+      margin-bottom: 0.5rem;
+    }
+
+    .policy-section li::marker {
+      color: #94a3b8;
+    }
+
+    .policy-section strong {
+      color: #0f172a;
+      font-weight: 600;
+    }
+
+    .policy-contact-box {
+      background: #f8fafc;
+      border-radius: 12px;
+      padding: 1.25rem 1.5rem;
+      margin-top: 1rem;
+      border: 1px solid #e2e8f0;
+    }
+
+    .policy-contact-box p {
+      margin: 0.4rem 0;
+      color: #334155;
+      font-size: 0.94rem;
+    }
+
+    .policy-contact-box p:first-child {
+      margin-top: 0;
+      color: #0f172a;
+    }
+
+    .back-to-top {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      color: #2563eb;
+      font-weight: 600;
+      font-size: 0.92rem;
+      text-decoration: none;
+      padding: 0.6rem 1.1rem;
+      border: 1px solid #bfdbfe;
+      border-radius: 30px;
+      transition: all 0.25s ease;
+    }
+
+    .back-to-top:hover {
+      background: #eff6ff;
+      transform: translateY(-2px);
+    }
+
+    /* ===== Mobile: hide sidebar, show a compact inline TOC ===== */
+    .policy-toc-mobile {
+      display: none;
+      margin-bottom: 2rem;
+    }
+
+    @media (max-width: 900px) {
+      .policy-layout {
+        grid-template-columns: 1fr;
+        gap: 0;
+      }
+
+      .policy-toc {
+        display: none;
+      }
+
+      .policy-toc-mobile {
+        display: block;
+      }
+
+      .policy-toc-mobile details {
+        background: #f8fafc;
+        border: 1px solid #e2e8f0;
+        border-radius: 12px;
+        padding: 0.9rem 1.1rem;
+      }
+
+      .policy-toc-mobile summary {
+        cursor: pointer;
+        font-weight: 600;
+        color: #0f172a;
+        font-size: 0.95rem;
+        list-style: none;
+      }
+
+      .policy-toc-mobile summary::-webkit-details-marker {
+        display: none;
+      }
+
+      .policy-toc-mobile summary::after {
+        content: '▾';
+        float: right;
+        color: #94a3b8;
+        transition: transform 0.2s;
+      }
+
+      .policy-toc-mobile details[open] summary::after {
+        transform: rotate(180deg);
+      }
+
+      .policy-toc-mobile ul {
+        list-style: none;
+        padding: 0;
+        margin: 0.9rem 0 0;
+      }
+
+      .policy-toc-mobile li {
+        margin-bottom: 0.3rem;
+      }
+
+      .policy-toc-mobile a {
+        display: block;
+        padding: 0.5rem 0.6rem;
+        color: #475569;
+        text-decoration: none;
+        font-size: 0.88rem;
+        border-radius: 6px;
+        transition: background 0.2s, color 0.2s;
+      }
+
+      .policy-toc-mobile a:hover {
+        background: #eff6ff;
+        color: #2563eb;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ============ HEADER ============ -->
+  <header class="navbar">
+    <div class="container nav-inner">
+      <a href="index.html" class="logo">
+        <img src="Logo.png" alt="Mlotshwa Trading Co." />
+        <span class="logo-text">
+          <span>MLOTSHWA</span>
+          <span>Trading Co.</span>
+        </span>
+      </a>
+      <nav>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="businesses.html">Businesses</a></li>
+          <li><a href="news.html">News</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ============ ANIMATED HERO ============ -->
+  <section class="business-hero" style="background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 60%, #2563eb 100%);">
+    <canvas id="heroCanvas" data-color="147, 197, 253"></canvas>
+    <div class="container">
+      <span class="business-badge">Legal</span>
+      <h1>Privacy Policy</h1>
+      <p class="business-tagline">How we collect, use, and protect your personal information.</p>
+    </div>
+  </section>
+
+  <!-- ============ BREADCRUMB ============ -->
+  <div class="breadcrumb">
+    <div class="container">
+      <a href="index.html">Home</a> <span>/</span>
+      <span>Privacy Policy</span>
+    </div>
+  </div>
+
+  <!-- ============ POLICY CONTENT ============ -->
+  <section class="section">
+    <div class="container">
+      <div class="policy-layout">
+
+        <!-- ===== SIDEBAR TOC (desktop only) ===== -->
+        <aside class="policy-toc" aria-label="Table of contents">
+          <h3>Contents</h3>
+          <ul>
+            <li><a href="#info-we-collect">1. Information We Collect</a></li>
+            <li><a href="#how-we-use">2. How We Use Your Information</a></li>
+            <li><a href="#sharing">3. Sharing Your Information</a></li>
+            <li><a href="#retention">4. How Long We Keep It</a></li>
+            <li><a href="#security">5. How We Protect It</a></li>
+            <li><a href="#your-rights">6. Your Rights</a></li>
+            <li><a href="#cookies">7. Cookies &amp; Website Data</a></li>
+            <li><a href="#children">8. Children's Privacy</a></li>
+            <li><a href="#changes">9. Changes to This Policy</a></li>
+            <li><a href="#contact">10. How to Contact Us</a></li>
+          </ul>
+        </aside>
+
+        <!-- ===== MAIN CONTENT ===== -->
+        <div class="policy-content">
+
+          <!-- Mobile TOC (collapses into a details dropdown) -->
+          <div class="policy-toc-mobile">
+            <details>
+              <summary>Jump to section</summary>
+              <ul>
+                <li><a href="#info-we-collect">1. Information We Collect</a></li>
+                <li><a href="#how-we-use">2. How We Use Your Information</a></li>
+                <li><a href="#sharing">3. Sharing Your Information</a></li>
+                <li><a href="#retention">4. How Long We Keep It</a></li>
+                <li><a href="#security">5. How We Protect It</a></li>
+                <li><a href="#your-rights">6. Your Rights</a></li>
+                <li><a href="#cookies">7. Cookies &amp; Website Data</a></li>
+                <li><a href="#children">8. Children's Privacy</a></li>
+                <li><a href="#changes">9. Changes to This Policy</a></li>
+                <li><a href="#contact">10. How to Contact Us</a></li>
+              </ul>
+            </details>
+          </div>
+
+          <!-- Meta -->
+          <div class="policy-meta reveal">
+            <div><strong>Effective date:</strong> 1 January 2026</div>
+            <div><strong>Last updated:</strong> 1 January 2026</div>
+            <div><strong>Applies to:</strong> All Mlotshwa Trading Corporations businesses</div>
+          </div>
+
+          <!-- Intro -->
+          <div class="policy-intro reveal">
+            <p>
+              Mlotshwa Trading Corporations ("we", "us", "our") respects your
+              privacy and is committed to protecting your personal information.
+              This Privacy Policy explains what information we collect, how we
+              use it, and the choices you have — in line with the
+              <strong>Protection of Personal Information Act (POPIA)</strong> of
+              South Africa.
+            </p>
+            <p>
+              This policy applies to all six of our businesses: Family Trust,
+              Shoe Wash, Ndabezitha Transportation, Precious Rentals, Banele
+              Driving, and Mlotshwa Productions.
+            </p>
+          </div>
+
+          <!-- 1 -->
+          <div class="policy-section reveal" id="info-we-collect">
+            <h2><span class="num">1.</span> Information We Collect</h2>
+            <p>We may collect the following types of personal information, depending on which of our services you use:</p>
+            <ul>
+              <li><strong>Identity information:</strong> name, surname, ID number, date of birth.</li>
+              <li><strong>Contact information:</strong> phone number, email address, physical address.</li>
+              <li><strong>Financial information:</strong> banking details (only when required — e.g. for Family Trust loan applications or Precious Rentals leases).</li>
+              <li><strong>Business information:</strong> company name, registration details (for commercial clients).</li>
+              <li><strong>Service information:</strong> details about the service you're enquiring about or booking.</li>
+              <li><strong>Website data:</strong> IP address, browser type, pages visited (see section 7).</li>
+            </ul>
+          </div>
+
+          <!-- 2 -->
+          <div class="policy-section reveal" id="how-we-use">
+            <h2><span class="num">2.</span> How We Use Your Information</h2>
+            <p>We use your personal information only for the purposes for which it was provided, including:</p>
+            <ul>
+              <li>To respond to your enquiries and provide quotes.</li>
+              <li>To deliver the services you've requested (e.g. cleaning your shoes, driving lessons, transport bookings).</li>
+              <li>To process applications (e.g. loans through Family Trust, rental applications through Precious Rentals).</li>
+              <li>To communicate with you about your bookings, orders, or accounts.</li>
+              <li>To improve our services and website experience.</li>
+              <li>To comply with legal and regulatory obligations.</li>
+            </ul>
+            <p>We will <strong>never</strong> sell your personal information to third parties.</p>
+          </div>
+
+          <!-- 3 -->
+          <div class="policy-section reveal" id="sharing">
+            <h2><span class="num">3.</span> Sharing Your Information</h2>
+            <p>We may share your information only in these limited circumstances:</p>
+            <ul>
+              <li><strong>Service providers:</strong> trusted partners who help us run our business (e.g. payment processors, delivery partners), bound by confidentiality.</li>
+              <li><strong>Legal requirements:</strong> where we're required by law, court order, or a regulator to disclose information.</li>
+              <li><strong>Business transfers:</strong> in the unlikely event of a merger or sale of assets, your information may transfer as part of that transaction.</li>
+              <li><strong>With your consent:</strong> where you've explicitly agreed to sharing.</li>
+            </ul>
+          </div>
+
+          <!-- 4 -->
+          <div class="policy-section reveal" id="retention">
+            <h2><span class="num">4.</span> How Long We Keep Your Information</h2>
+            <p>
+              We keep your personal information only for as long as necessary to fulfil
+              the purpose for which it was collected — or as required by law.
+            </p>
+            <ul>
+              <li><strong>Enquiries:</strong> up to 12 months after last contact.</li>
+              <li><strong>Service records:</strong> as long as the service is active, plus a reasonable archive period.</li>
+              <li><strong>Financial records:</strong> as required by South African tax and financial laws (typically 5 years).</li>
+            </ul>
+            <p>When no longer needed, your information is securely deleted or anonymised.</p>
+          </div>
+
+          <!-- 5 -->
+          <div class="policy-section reveal" id="security">
+            <h2><span class="num">5.</span> How We Protect Your Information</h2>
+            <p>
+              We take reasonable and appropriate technical and organisational measures to protect
+              your personal information against loss, damage, and unauthorised access. These include:
+            </p>
+            <ul>
+              <li>Restricted access — only staff who need the information can access it.</li>
+              <li>Secure storage of physical and digital records.</li>
+              <li>Regular review of our practices and systems.</li>
+              <li>Confidentiality agreements with employees and service providers.</li>
+            </ul>
+            <p>
+              While no system is 100% secure, we're committed to protecting your information
+              to the best of our ability and to notifying you promptly if a breach occurs.
+            </p>
+          </div>
+
+          <!-- 6 -->
+          <div class="policy-section reveal" id="your-rights">
+            <h2><span class="num">6.</span> Your Rights</h2>
+            <p>Under POPIA, you have the right to:</p>
+            <ul>
+              <li>Access the personal information we hold about you.</li>
+              <li>Request corrections to inaccurate or outdated information.</li>
+              <li>Request deletion of your information (where legally possible).</li>
+              <li>Object to processing in certain circumstances.</li>
+              <li>Withdraw consent where processing is based on consent.</li>
+              <li>Lodge a complaint with the <strong>Information Regulator of South Africa</strong>.</li>
+            </ul>
+            <p>To exercise any of these rights, contact us using the details in section 10.</p>
+          </div>
+
+          <!-- 7 -->
+          <div class="policy-section reveal" id="cookies">
+            <h2><span class="num">7.</span> Cookies &amp; Website Data</h2>
+            <p>
+              Our website may use basic cookies and similar technologies to help it function
+              properly and to understand how visitors use it. We do not use cookies for
+              advertising or tracking you across other websites.
+            </p>
+            <p>
+              You can disable cookies in your browser settings, though some parts of the
+              site may then not work as intended.
+            </p>
+          </div>
+
+          <!-- 8 -->
+          <div class="policy-section reveal" id="children">
+            <h2><span class="num">8.</span> Children's Privacy</h2>
+            <p>
+              Some of our services (e.g. Banele Driving lessons) may involve minors.
+              We collect children's information only with the consent of a parent or
+              legal guardian, and always in accordance with POPIA.
+            </p>
+          </div>
+
+          <!-- 9 -->
+          <div class="policy-section reveal" id="changes">
+            <h2><span class="num">9.</span> Changes to This Policy</h2>
+            <p>
+              We may update this Privacy Policy from time to time to reflect changes in
+              our practices or legal requirements. When we do, we'll update the "Last
+              updated" date at the top of this page and, if the changes are significant,
+              notify you through our website or by email.
+            </p>
+          </div>
+
+          <!-- 10 -->
+          <div class="policy-section reveal" id="contact">
+            <h2><span class="num">10.</span> How to Contact Us</h2>
+            <p>For any privacy-related questions or requests, please contact us:</p>
+            <div class="policy-contact-box">
+              <p><strong>Mlotshwa Trading Corporations</strong></p>
+              <p>📧 thandolwethumlotshwa6@gmail.com</p>
+              <p>📞 066 568 6336</p>
+              <p>📍 324 West Street, Durban, South Africa</p>
+            </div>
+            <p style="margin-top:1.5rem; font-size:0.92rem;">
+              If you're not satisfied with our response, you have the right to complain to the
+              <strong>Information Regulator of South Africa</strong> at
+              <a href="https://inforegulator.org.za" target="_blank" rel="noopener" style="color:#2563eb;">inforegulator.org.za</a>.
+            </p>
+          </div>
+
+          <!-- Back to top -->
+          <div class="reveal" style="text-align:center; margin-top:3.5rem;">
+            <a href="#top" class="back-to-top" onclick="window.scrollTo({top:0,behavior:'smooth'});return false;">
+              ↑ Back to top
+            </a>
+          </div>
+
+        </div><!-- /policy-content -->
+      </div><!-- /policy-layout -->
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div>
+        <img src="Logo.png" alt="Mlotshwa Trading Co." class="footer-logo" />
+        <h3>Mlotshwa Trading Corporations</h3>
+        <p>Building businesses that shape us to build communities.</p>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <ul>
+          <li><a href="about.html">About</a></li>
+          <li><a href="news.html">News</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Our Businesses</h4>
+        <ul>
+          <li><a href="business-family-trust.html">Family Trust</a></li>
+          <li><a href="business-shoe-wash.html">Shoe Wash</a></li>
+          <li><a href="business-ndabezitha.html">Ndabezitha Transportation</a></li>
+          <li><a href="business-precious-rentals.html">Precious Rentals</a></li>
+          <li><a href="business-banele-driving.html">Banele Driving</a></li>
+          <li><a href="business-mlotshwa-productions.html">Mlotshwa Productions</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <p>thandolwethumlotshwa6@gmail.com</p>
+        <p>066 568 6336</p>
+        <p>324 West Street, Durban</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Mlotshwa Trading Corporations. All rights reserved. · <a href="privacy.html">Privacy Policy</a></p>
+    </div>
+  </footer>
+
+  <!-- ============ WHATSAPP FLOAT ============ -->
+  <a href="https://wa.me/27665686336" class="whatsapp-float" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+    </svg>
+  </a>
+
+  <!-- ============ SCRIPTS ============ -->
+  <script>
+    (function () {
+      const toggle = document.getElementById('menuToggle');
+      const links  = document.getElementById('navLinks');
+      if (!toggle || !links) return;
+      toggle.addEventListener('click', () => links.classList.toggle('open'));
+    })();
+
+    /* ==================================================
+       ACTIVE TOC HIGHLIGHTING
+       Highlights the sidebar link for the section
+       currently visible in the viewport.
+       ================================================== */
+    (function () {
+      const tocLinks = document.querySelectorAll('.policy-toc a[href^="#"]');
+      if (!tocLinks.length) return;
+
+      const sections = Array.from(tocLinks)
+        .map(link => {
+          const id = link.getAttribute('href').slice(1);
+          return document.getElementById(id);
+        })
+        .filter(Boolean);
+
+      function setActive() {
+        const scrollPos = window.scrollY;
+        const offset = 130; // navbar + a little breathing room
+        let current = null;
+
+        for (const section of sections) {
+          const top = section.offsetTop - offset;
+          if (scrollPos >= top) current = section.id;
+        }
+
+        // If we're above the first section, highlight nothing
+        if (scrollPos < sections[0].offsetTop - offset - 200) current = null;
+
+        tocLinks.forEach(link => {
+          const isActive = link.getAttribute('href').slice(1) === current;
+          link.classList.toggle('active', isActive);
+        });
+      }
+
+      // Throttle with requestAnimationFrame for smoothness
+      let ticking = false;
+      window.addEventListener('scroll', () => {
+        if (!ticking) {
+          window.requestAnimationFrame(() => {
+            setActive();
+            ticking = false;
+          });
+          ticking = true;
+        }
+      }, { passive: true });
+
+      setActive(); // run once on load
+    })();
+  </script>
+  <script src="js/business-animations.js"></script>
+</body>
+</html>

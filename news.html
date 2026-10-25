@@ -1,0 +1,1337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>News &amp; Insights — Mlotshwa Trading Corporations</title>
+  <meta name="description" content="The latest news, updates, and insights from across the six businesses of Mlotshwa Trading Corporations." />
+  <link rel="icon" type="image/png" href="Logo.png" />
+
+  <meta property="og:title" content="News — Mlotshwa Trading Corporations" />
+  <meta property="og:description" content="Latest updates from across our group of businesses." />
+  <meta property="og:image" content="images/logo.png" />
+
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/animations.css" />
+
+  <style>
+    /* ================================================================
+       BLACK & WHITE — NEWS PAGE
+       White header · Black footer
+       ================================================================ */
+
+    :root {
+      --bw-black: #0a0a0a;
+      --bw-ink: #111111;
+      --bw-gray-3: #6b6b6b;
+      --bw-gray-4: #a3a3a3;
+      --bw-gray-5: #d4d4d4;
+      --bw-gray-6: #f5f5f5;
+      --bw-gray-7: #fafafa;
+      --bw-white: #ffffff;
+      --bw-border: rgba(255, 255, 255, 0.14);
+      --bw-border-dark: rgba(0, 0, 0, 0.1);
+    }
+
+    body {
+      background: var(--bw-white);
+      color: var(--bw-ink);
+      font-family: system-ui, -apple-system, 'Inter', 'Segoe UI', Roboto, sans-serif;
+      margin: 0;
+    }
+
+    h1, h2, h3, h4 {
+      letter-spacing: -0.03em;
+      font-weight: 700;
+      color: var(--bw-ink);
+    }
+
+    /* ============ WHITE HEADER ============ */
+    .navbar {
+      background: var(--bw-white) !important;
+      border-bottom: 1px solid var(--bw-border-dark);
+      padding: 1.1rem 0;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .navbar .logo-text span:first-child {
+      color: var(--bw-black);
+      font-weight: 800;
+      letter-spacing: 0.02em;
+    }
+
+    .navbar .logo-text span:last-child {
+      color: var(--bw-gray-3);
+      font-weight: 400;
+      letter-spacing: 0.02em;
+    }
+
+    .navbar .nav-links a {
+      color: var(--bw-gray-3) !important;
+      font-weight: 500;
+      font-size: 0.9rem;
+      transition: color 0.25s ease;
+    }
+
+    .navbar .nav-links a:hover,
+    .navbar .nav-links a.active {
+      color: var(--bw-black) !important;
+    }
+
+    .navbar .menu-toggle span {
+      background: var(--bw-black) !important;
+    }
+
+    /* ============ HERO ============ */
+    .bw-hero {
+      background: var(--bw-black);
+      color: var(--bw-white);
+      position: relative;
+      overflow: hidden;
+      padding: 6rem 0 5rem;
+      min-height: 50vh;
+      display: flex;
+      align-items: center;
+    }
+
+    .bw-hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(255, 255, 255, 0.035) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.035) 1px, transparent 1px);
+      background-size: 80px 80px;
+      z-index: 1;
+      pointer-events: none;
+    }
+
+    .bw-hero::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at 50% 45%, transparent 15%, var(--bw-black) 82%);
+      z-index: 2;
+      pointer-events: none;
+    }
+
+    .bw-hero .container {
+      position: relative;
+      z-index: 3;
+    }
+
+    .bw-hero-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      color: var(--bw-gray-4);
+      font-size: 0.78rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      font-weight: 500;
+      margin-bottom: 1.75rem;
+    }
+
+    .bw-hero-eyebrow::before {
+      content: '';
+      width: 40px;
+      height: 1px;
+      background: var(--bw-gray-3);
+    }
+
+    .bw-hero h1 {
+      color: var(--bw-white);
+      font-size: clamp(2.4rem, 6vw, 4.2rem);
+      line-height: 1.05;
+      font-weight: 800;
+      letter-spacing: -0.045em;
+      margin: 0 0 1.25rem;
+      max-width: 16ch;
+    }
+
+    .bw-hero h1 .accent-line {
+      display: block;
+      color: var(--bw-gray-4);
+      font-weight: 300;
+      font-style: italic;
+    }
+
+    .bw-hero-tagline {
+      color: var(--bw-gray-4);
+      font-size: clamp(1rem, 1.5vw, 1.15rem);
+      line-height: 1.6;
+      max-width: 540px;
+      margin: 0;
+    }
+
+    /* ============ FILTER BAR ============ */
+    .bw-filters {
+      padding: 2rem 0;
+      background: var(--bw-white);
+      border-bottom: 1px solid var(--bw-border-dark);
+      position: sticky;
+      top: 76px;
+      z-index: 50;
+    }
+
+    .bw-filter-row {
+      display: flex;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+      align-items: center;
+      overflow-x: auto;
+      scrollbar-width: thin;
+    }
+
+    .bw-filter-row::-webkit-scrollbar {
+      height: 4px;
+    }
+
+    .bw-filter-row::-webkit-scrollbar-thumb {
+      background: var(--bw-gray-5);
+      border-radius: 2px;
+    }
+
+    .bw-filter-label {
+      font-size: 0.7rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--bw-gray-3);
+      font-weight: 600;
+      margin-right: 0.75rem;
+      white-space: nowrap;
+    }
+
+    .bw-filter-btn {
+      padding: 0.55rem 1.1rem;
+      background: transparent;
+      color: var(--bw-gray-3);
+      border: 1px solid var(--bw-gray-5);
+      font-size: 0.82rem;
+      font-weight: 500;
+      font-family: inherit;
+      cursor: pointer;
+      border-radius: 0;
+      transition: all 0.25s ease;
+      white-space: nowrap;
+    }
+
+    .bw-filter-btn:hover {
+      border-color: var(--bw-black);
+      color: var(--bw-black);
+    }
+
+    .bw-filter-btn.active {
+      background: var(--bw-black);
+      border-color: var(--bw-black);
+      color: var(--bw-white);
+    }
+
+    /* ============ FEATURED STORY ============ */
+    .bw-featured {
+      padding: 5rem 0 4rem;
+      background: var(--bw-white);
+    }
+
+    .bw-featured-card {
+      display: block;
+      text-decoration: none;
+      color: inherit;
+      border: 1.5px solid var(--bw-black);
+      padding: 3.5rem 3rem;
+      position: relative;
+      overflow: hidden;
+      transition: background 0.4s ease, color 0.4s ease;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      min-height: 400px;
+    }
+
+    .bw-featured-card:hover {
+      background: var(--bw-black);
+      color: var(--bw-white);
+    }
+
+    .bw-featured-label {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.7rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--bw-gray-3);
+      font-weight: 600;
+      margin-bottom: 1.5rem;
+      transition: color 0.4s ease;
+    }
+
+    .bw-featured-label::before {
+      content: '★';
+      color: var(--bw-black);
+      transition: color 0.4s ease;
+    }
+
+    .bw-featured-card:hover .bw-featured-label {
+      color: var(--bw-gray-4);
+    }
+
+    .bw-featured-card:hover .bw-featured-label::before {
+      color: var(--bw-white);
+    }
+
+    .bw-featured-meta {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      font-size: 0.75rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--bw-gray-3);
+      font-weight: 500;
+      margin-bottom: 1.5rem;
+      transition: color 0.4s ease;
+    }
+
+    .bw-featured-card:hover .bw-featured-meta {
+      color: var(--bw-gray-4);
+    }
+
+    .bw-featured-dot {
+      width: 4px;
+      height: 4px;
+      border-radius: 50%;
+      background: currentColor;
+    }
+
+    .bw-featured-card h2 {
+      font-size: clamp(1.7rem, 3.4vw, 2.5rem);
+      font-weight: 800;
+      letter-spacing: -0.035em;
+      line-height: 1.15;
+      margin: 0 0 1.25rem;
+      transition: color 0.4s ease;
+      max-width: 22ch;
+    }
+
+    .bw-featured-card:hover h2 {
+      color: var(--bw-white);
+    }
+
+    .bw-featured-card p {
+      color: var(--bw-gray-3);
+      font-size: 1.05rem;
+      line-height: 1.7;
+      margin: 0 0 2rem;
+      max-width: 620px;
+      transition: color 0.4s ease;
+    }
+
+    .bw-featured-card:hover p {
+      color: var(--bw-gray-4);
+    }
+
+    .bw-featured-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.82rem;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--bw-ink);
+      border-bottom: 1px solid currentColor;
+      padding-bottom: 0.3rem;
+      align-self: flex-start;
+      transition: color 0.4s ease, gap 0.3s ease;
+    }
+
+    .bw-featured-card:hover .bw-featured-link {
+      color: var(--bw-white);
+      gap: 0.8rem;
+    }
+
+    @media (max-width: 700px) {
+      .bw-featured-card {
+        padding: 2.5rem 2rem;
+        min-height: 320px;
+      }
+    }
+
+    /* ============ SECTION HEAD ============ */
+    .bw-section-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      margin-bottom: 3rem;
+      gap: 2rem;
+      flex-wrap: wrap;
+      border-bottom: 1px solid var(--bw-border-dark);
+      padding-bottom: 1.5rem;
+    }
+
+    .bw-section-head h2 {
+      font-size: clamp(1.6rem, 3vw, 2.2rem);
+      font-weight: 800;
+      letter-spacing: -0.035em;
+      margin: 0;
+      max-width: 24ch;
+      line-height: 1.15;
+    }
+
+    .bw-section-head .bw-count {
+      font-size: 0.75rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--bw-gray-3);
+      font-weight: 500;
+      white-space: nowrap;
+      padding-bottom: 0.5rem;
+    }
+
+    /* ============ NEWS LIST ============ */
+    .bw-news-list-section {
+      padding: 4rem 0 6rem;
+      background: var(--bw-white);
+    }
+
+    .bw-news-list {
+      border-top: 1px solid var(--bw-border-dark);
+    }
+
+    .bw-news-item {
+      display: grid;
+      grid-template-columns: 130px 1fr auto;
+      gap: 2rem;
+      align-items: start;
+      padding: 2.5rem 0;
+      border-bottom: 1px solid var(--bw-border-dark);
+      text-decoration: none;
+      color: inherit;
+      position: relative;
+      transition: padding 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+      overflow: hidden;
+    }
+
+    .bw-news-item::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: var(--bw-black);
+      transform: scaleY(0);
+      transform-origin: center;
+      transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+      z-index: 0;
+    }
+
+    .bw-news-item:hover::before {
+      transform: scaleY(1);
+    }
+
+    .bw-news-item > * {
+      position: relative;
+      z-index: 1;
+      transition: color 0.3s ease;
+    }
+
+    .bw-news-item:hover {
+      padding-left: 2rem;
+      padding-right: 2rem;
+    }
+
+    /* Left column — meta */
+    .bw-news-meta {
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+      padding-top: 0.3rem;
+    }
+
+    .bw-news-cat {
+      font-size: 0.68rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--bw-gray-3);
+      font-weight: 600;
+      transition: color 0.3s ease;
+    }
+
+    .bw-news-item:hover .bw-news-cat {
+      color: var(--bw-gray-4);
+    }
+
+    .bw-news-date {
+      font-size: 0.78rem;
+      color: var(--bw-gray-4);
+      font-weight: 500;
+      font-variant-numeric: tabular-nums;
+      transition: color 0.3s ease;
+    }
+
+    .bw-news-item:hover .bw-news-date {
+      color: var(--bw-gray-4);
+    }
+
+    .bw-news-reading {
+      font-size: 0.75rem;
+      color: var(--bw-gray-4);
+      transition: color 0.3s ease;
+    }
+
+    /* Middle column — story */
+    .bw-news-body h3 {
+      font-size: clamp(1.15rem, 2vw, 1.5rem);
+      font-weight: 700;
+      letter-spacing: -0.025em;
+      line-height: 1.3;
+      margin: 0 0 0.85rem;
+      transition: color 0.3s ease;
+    }
+
+    .bw-news-item:hover .bw-news-body h3 {
+      color: var(--bw-white);
+    }
+
+    .bw-news-body p {
+      color: var(--bw-gray-3);
+      font-size: 0.98rem;
+      line-height: 1.65;
+      margin: 0;
+      max-width: 720px;
+      transition: color 0.3s ease;
+    }
+
+    .bw-news-item:hover .bw-news-body p {
+      color: var(--bw-gray-4);
+    }
+
+    /* Right column — arrow */
+    .bw-news-arrow {
+      font-size: 1.5rem;
+      color: var(--bw-gray-3);
+      padding-top: 0.3rem;
+      transition: transform 0.3s ease, color 0.3s ease;
+    }
+
+    .bw-news-item:hover .bw-news-arrow {
+      color: var(--bw-white);
+      transform: translateX(8px);
+    }
+
+    @media (max-width: 800px) {
+      .bw-news-item {
+        grid-template-columns: 1fr auto;
+        gap: 1rem;
+        padding: 2rem 0;
+      }
+      .bw-news-meta {
+        grid-column: 1 / -1;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 0.75rem;
+        padding-top: 0;
+      }
+      .bw-news-meta > * + *::before {
+        content: '·';
+        margin-right: 0.75rem;
+        color: var(--bw-gray-4);
+      }
+      .bw-news-item:hover {
+        padding-left: 1rem;
+        padding-right: 1rem;
+      }
+    }
+
+    /* ============ NO RESULTS ============ */
+    .bw-no-results {
+      display: none;
+      padding: 4rem 0;
+      text-align: center;
+      color: var(--bw-gray-3);
+      font-size: 1rem;
+      letter-spacing: 0.05em;
+    }
+
+    .bw-no-results.visible {
+      display: block;
+    }
+
+    /* ============ NEWSLETTER CTA ============ */
+    .bw-newsletter {
+      padding: 6rem 0;
+      background: var(--bw-black);
+      color: var(--bw-white);
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .bw-newsletter::before {
+      content: '';
+      position: absolute;
+      top: -30%;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 700px;
+      height: 700px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(255, 255, 255, 0.05), transparent 70%);
+      pointer-events: none;
+    }
+
+    .bw-newsletter-inner {
+      position: relative;
+      z-index: 1;
+      max-width: 700px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    .bw-newsletter h2 {
+      color: var(--bw-white);
+      font-size: clamp(1.8rem, 3.5vw, 2.5rem);
+      font-weight: 800;
+      letter-spacing: -0.04em;
+      line-height: 1.1;
+      margin: 0 0 1rem;
+    }
+
+    .bw-newsletter p {
+      color: var(--bw-gray-4);
+      font-size: 1rem;
+      line-height: 1.6;
+      margin: 0 0 2rem;
+    }
+
+    .bw-newsletter-form {
+      display: flex;
+      gap: 0;
+      max-width: 500px;
+      margin: 0 auto;
+      border: 1.5px solid rgba(255, 255, 255, 0.35);
+    }
+
+    .bw-newsletter-form input {
+      flex: 1;
+      padding: 1rem 1.25rem;
+      background: transparent;
+      border: none;
+      color: var(--bw-white);
+      font-size: 0.95rem;
+      font-family: inherit;
+      outline: none;
+      min-width: 0;
+    }
+
+    .bw-newsletter-form input::placeholder {
+      color: var(--bw-gray-4);
+    }
+
+    .bw-newsletter-form button {
+      padding: 1rem 1.75rem;
+      background: var(--bw-white);
+      color: var(--bw-black);
+      border: none;
+      font-size: 0.85rem;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      cursor: pointer;
+      font-family: inherit;
+      transition: background 0.3s ease;
+      white-space: nowrap;
+    }
+
+    .bw-newsletter-form button:hover {
+      background: var(--bw-gray-5);
+    }
+
+    @media (max-width: 520px) {
+      .bw-newsletter-form {
+        flex-direction: column;
+        border: none;
+      }
+      .bw-newsletter-form input {
+        border: 1.5px solid rgba(255, 255, 255, 0.35);
+      }
+      .bw-newsletter-form button {
+        border: 1.5px solid var(--bw-white);
+      }
+    }
+
+    /* ============ BLACK FOOTER ============ */
+    .footer {
+      background: var(--bw-black);
+      color: var(--bw-gray-4);
+      border-top: 1px solid var(--bw-border);
+      padding: 5rem 0 2rem;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1.2fr;
+      gap: 3rem;
+      margin-bottom: 3rem;
+    }
+
+    @media (max-width: 900px) {
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 2.5rem;
+      }
+    }
+
+    @media (max-width: 560px) {
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+.footer-logo {
+  height: 60px;
+  width: auto;
+  margin-bottom: 1rem;
+  background: white;
+  padding: 0.6rem 0.9rem;
+  border-radius: 8px;
+  display: block;
+    }
+
+    .footer h3 {
+      color: var(--bw-white);
+      font-weight: 700;
+      font-size: 1.1rem;
+      letter-spacing: -0.02em;
+      margin: 0 0 0.75rem;
+    }
+
+    .footer h4 {
+      font-size: 0.72rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--bw-gray-4);
+      margin: 0 0 1.25rem;
+      font-weight: 600;
+    }
+
+    .footer p,
+    .footer a,
+    .footer li {
+      color: var(--bw-gray-4);
+      font-size: 0.9rem;
+      line-height: 1.7;
+    }
+
+    .footer p {
+      margin: 0 0 0.5rem;
+    }
+
+    .footer ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .footer li {
+      margin-bottom: 0.6rem;
+    }
+
+    .footer a {
+      text-decoration: none;
+      transition: color 0.25s ease, padding-left 0.25s ease;
+      display: inline-block;
+    }
+
+    .footer a:hover {
+      color: var(--bw-white);
+      padding-left: 4px;
+    }
+
+    .footer-social {
+      display: flex;
+      gap: 0.6rem;
+      margin-top: 1.25rem;
+    }
+
+    .footer-social a {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      border: 1px solid var(--bw-border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0;
+      transition: background 0.3s ease, border-color 0.3s ease, transform 0.3s ease;
+    }
+
+    .footer-social a:hover {
+      background: var(--bw-white);
+      border-color: var(--bw-white);
+      transform: translateY(-3px);
+      padding-left: 0;
+    }
+
+    .footer-social svg {
+      width: 15px;
+      height: 15px;
+      fill: var(--bw-gray-4);
+      transition: fill 0.3s ease;
+    }
+
+    .footer-social a:hover svg {
+      fill: var(--bw-black);
+    }
+
+    .footer-bottom {
+      border-top: 1px solid var(--bw-border);
+      margin-top: 2rem;
+      padding-top: 1.75rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .footer-bottom p {
+      font-size: 0.78rem;
+      color: var(--bw-gray-3);
+      margin: 0;
+      letter-spacing: 0.02em;
+    }
+
+    .footer-bottom a {
+      color: var(--bw-gray-3);
+    }
+
+    .footer-bottom a:hover {
+      color: var(--bw-white);
+      padding-left: 0;
+    }
+
+    /* ============ WhatsApp float ============ */
+    .whatsapp-float {
+      background: var(--bw-black) !important;
+      color: var(--bw-white) !important;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25) !important;
+    }
+
+    .whatsapp-float svg {
+      fill: var(--bw-white) !important;
+    }
+
+    /* ============ Reveal ============ */
+    .bw-reveal {
+      opacity: 0;
+      transform: translateY(28px);
+      transition: opacity 0.8s cubic-bezier(0.22, 1, 0.36, 1),
+                  transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+
+    .bw-reveal.is-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .bw-newsletter-msg {
+  margin: 1rem 0 0;
+  font-size: 0.9rem;
+  min-height: 1.2em;
+  color: var(--bw-gray-4);
+  transition: color 0.3s ease;
+}
+.bw-newsletter-msg.is-success {
+  color: #4ade80; /* soft green */
+}
+.bw-newsletter-msg.is-error {
+  color: #f87171; /* soft red */
+}
+  </style>
+</head>
+<body>
+
+  <!-- ============ WHITE HEADER ============ -->
+  <header class="navbar">
+    <div class="container nav-inner">
+      <a href="index.html" class="logo">
+        <img src="Logo.png" alt="Mlotshwa Trading Co." />
+        <span class="logo-text">
+          <span>MLOTSHWA</span>
+          <span>Trading Co.</span>
+        </span>
+      </a>
+      <nav>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="businesses.html">Businesses</a></li>
+          <li><a href="news.html" class="active">News</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ============ HERO ============ -->
+  <section class="bw-hero">
+    <div class="container">
+      <div class="bw-hero-eyebrow">Newsroom</div>
+      <h1>
+        News &amp; Insights.<br />
+        <span class="accent-line">From across the group.</span>
+      </h1>
+      <p class="bw-hero-tagline">
+        The latest updates, milestones, and stories from all six of our
+        businesses — Durban to KwaZulu-Natal.
+      </p>
+    </div>
+  </section>
+
+  <!-- ============ FILTER BAR ============ -->
+  <div class="bw-filters">
+    <div class="container">
+      <div class="bw-filter-row">
+        <span class="bw-filter-label">Filter</span>
+        <button class="bw-filter-btn active" data-filter="all">All Stories</button>
+        <button class="bw-filter-btn" data-filter="group">Group</button>
+        <button class="bw-filter-btn" data-filter="family-trust">Family Trust</button>
+        <button class="bw-filter-btn" data-filter="shoe-wash">Shoe Wash</button>
+        <button class="bw-filter-btn" data-filter="ndabezitha">Ndabezitha</button>
+        <button class="bw-filter-btn" data-filter="precious">Precious Rentals</button>
+        <button class="bw-filter-btn" data-filter="banele">Banele Driving</button>
+        <button class="bw-filter-btn" data-filter="productions">Productions</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ FEATURED STORY ============ -->
+  <section class="bw-featured">
+    <div class="container">
+      <a href="#" class="bw-featured-card bw-reveal">
+        <div>
+          <div class="bw-featured-label">Featured Story</div>
+          <div class="bw-featured-meta">
+            <span>Group</span>
+            <span class="bw-featured-dot"></span>
+            <span>12 March 2026</span>
+            <span class="bw-featured-dot"></span>
+            <span>5 min read</span>
+          </div>
+          <h2>Mlotshwa Trading Corporations launches new digital home for all six businesses.</h2>
+          <p>
+            After months of planning, we've officially launched a unified digital
+            platform that brings together Family Trust, Shoe Wash, Ndabezitha
+            Transportation, Precious Rentals, Banele Driving, and Mlotshwa
+            Productions. The new site makes it easier than ever for customers
+            across Durban and KwaZulu-Natal to discover, contact, and do business
+            with any of the group's companies — all from one place.
+          </p>
+        </div>
+        <span class="bw-featured-link">Read full story →</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- ============ ALL STORIES ============ -->
+  <section class="bw-news-list-section">
+    <div class="container">
+      <div class="bw-section-head bw-reveal">
+        <h2>All stories.</h2>
+        <div class="bw-count" id="storyCount">13 Stories</div>
+      </div>
+
+      <div class="bw-news-list" id="newsList">
+
+        <!-- FAMILY TRUST -->
+        <a href="#" class="bw-news-item bw-reveal" data-category="family-trust">
+          <div class="bw-news-meta">
+            <span class="bw-news-cat">Family Trust</span>
+            <span class="bw-news-date">08 Mar 2026</span>
+            <span class="bw-news-reading">3 min read</span>
+          </div>
+          <div class="bw-news-body">
+            <h3>Family Trust hits 100 approved loans in its first year.</h3>
+            <p>Most approvals went to small business owners and families in and around Durban who needed fast, fair access to funds.</p>
+          </div>
+          <span class="bw-news-arrow">→</span>
+        </a>
+
+        <a href="#" class="bw-news-item bw-reveal" data-category="family-trust">
+          <div class="bw-news-meta">
+            <span class="bw-news-cat">Family Trust</span>
+            <span class="bw-news-date">22 Jan 2026</span>
+            <span class="bw-news-reading">4 min read</span>
+          </div>
+          <div class="bw-news-body">
+            <h3>Five tips for managing your family finances in 2026.</h3>
+            <p>Practical advice on budgeting, saving for school fees, and building an emergency fund for households juggling multiple incomes.</p>
+          </div>
+          <span class="bw-news-arrow">→</span>
+        </a>
+
+        <!-- SHOE WASH -->
+        <a href="#" class="bw-news-item bw-reveal" data-category="shoe-wash">
+          <div class="bw-news-meta">
+            <span class="bw-news-cat">Shoe Wash</span>
+            <span class="bw-news-date">05 Mar 2026</span>
+            <span class="bw-news-reading">2 min read</span>
+          </div>
+          <div class="bw-news-body">
+            <h3>Shoe Wash now restores suede, leather and designer sneakers.</h3>
+            <p>The team completed a certified training programme and now handles everything from everyday school shoes to limited-edition collectibles.</p>
+          </div>
+          <span class="bw-news-arrow">→</span>
+        </a>
+
+        <a href="#" class="bw-news-item bw-reveal" data-category="shoe-wash">
+          <div class="bw-news-meta">
+            <span class="bw-news-cat">Shoe Wash</span>
+            <span class="bw-news-date">14 Feb 2026</span>
+            <span class="bw-news-reading">3 min read</span>
+          </div>
+          <div class="bw-news-body">
+            <h3>Valentine's special: bring your partner's kicks back to life.</h3>
+            <p>For Valentine's weekend we ran a two-for-one restoration package — more than 40 pairs were dropped off in three days.</p>
+          </div>
+          <span class="bw-news-arrow">→</span>
+        </a>
+
+        <!-- NDABEZITHA -->
+        <a href="#" class="bw-news-item bw-reveal" data-category="ndabezitha">
+          <div class="bw-news-meta">
+            <span class="bw-news-cat">Ndabezitha</span>
+            <span class="bw-news-date">02 Mar 2026</span>
+            <span class="bw-news-reading">3 min read</span>
+          </div>
+          <div class="bw-news-body">
+            <h3>Ndabezitha Transportation adds two new vehicles to its fleet.</h3>
+            <p>The company expands into the South Coast following strong demand from small businesses that need reliable delivery across KZN.</p>
+          </div>
+          <span class="bw-news-arrow">→</span>
+        </a>
+
+        <a href="#" class="bw-news-item bw-reveal" data-category="ndabezitha">
+          <div class="bw-news-meta">
+            <span class="bw-news-cat">Ndabezitha</span>
+            <span class="bw-news-date">18 Dec 2025</span>
+            <span class="bw-news-reading">2 min read</span>
+          </div>
+          <div class="bw-news-body">
+            <h3>Festive season: Ndabezitha keeps Durban moving.</h3>
+            <p>A reduced-holiday schedule kept essential deliveries moving during one of the busiest periods of the year.</p>
+          </div>
+          <span class="bw-news-arrow">→</span>
+        </a>
+
+        <!-- PRECIOUS RENTALS -->
+        <a href="#" class="bw-news-item bw-reveal" data-category="precious">
+          <div class="bw-news-meta">
+            <span class="bw-news-cat">Precious Rentals</span>
+            <span class="bw-news-date">28 Feb 2026</span>
+            <span class="bw-news-reading">3 min read</span>
+          </div>
+          <div class="bw-news-body">
+            <h3>Precious Rentals opens three new apartments in central Durban.</h3>
+            <p>Newly renovated units feature secure parking, back-up water and prepaid electricity — the features tenants have been asking for.</p>
+          </div>
+          <span class="bw-news-arrow">→</span>
+        </a>
+
+        <a href="#" class="bw-news-item bw-reveal" data-category="precious">
+          <div class="bw-news-meta">
+            <span class="bw-news-cat">Precious Rentals</span>
+            <span class="bw-news-date">10 Jan 2026</span>
+            <span class="bw-news-reading">2 min read</span>
+          </div>
+          <div class="bw-news-body">
+            <h3>What to look for before signing a rental lease.</h3>
+            <p>A simple checklist for first-time tenants — from deposit rules to maintenance responsibilities. A must-read for anyone renting for the first time.</p>
+          </div>
+          <span class="bw-news-arrow">→</span>
+        </a>
+
+        <!-- BANELE -->
+        <a href="#" class="bw-news-item bw-reveal" data-category="banele">
+          <div class="bw-news-meta">
+            <span class="bw-news-cat">Banele Driving</span>
+            <span class="bw-news-date">25 Feb 2026</span>
+            <span class="bw-news-reading">3 min read</span>
+          </div>
+          <div class="bw-news-body">
+            <h3>Banele Driving celebrates a 92% first-time pass rate.</h3>
+            <p>Structured lessons and dedicated road-test simulations are being credited for the strong results this quarter.</p>
+          </div>
+          <span class="bw-news-arrow">→</span>
+        </a>
+
+        <a href="#" class="bw-news-item bw-reveal" data-category="banele">
+          <div class="bw-news-meta">
+            <span class="bw-news-cat">Banele Driving</span>
+            <span class="bw-news-date">03 Dec 2025</span>
+            <span class="bw-news-reading">2 min read</span>
+          </div>
+          <div class="bw-news-body">
+            <h3>Summer special: book 10 lessons, get 1 free.</h3>
+            <p>Our summer promotion helped dozens of new drivers get behind the wheel before the new year.</p>
+          </div>
+          <span class="bw-news-arrow">→</span>
+        </a>
+
+        <!-- PRODUCTIONS -->
+        <a href="#" class="bw-news-item bw-reveal" data-category="productions">
+          <div class="bw-news-meta">
+            <span class="bw-news-cat">Productions</span>
+            <span class="bw-news-date">01 Mar 2026</span>
+            <span class="bw-news-reading">4 min read</span>
+          </div>
+          <div class="bw-news-body">
+            <h3>Mlotshwa Productions films its first brand documentary.</h3>
+            <p>A 15-minute piece profiling a local Durban entrepreneur — from scripting and cinematography to colour grading and sound design.</p>
+          </div>
+          <span class="bw-news-arrow">→</span>
+        </a>
+
+        <a href="#" class="bw-news-item bw-reveal" data-category="productions">
+          <div class="bw-news-meta">
+            <span class="bw-news-cat">Productions</span>
+            <span class="bw-news-date">20 Jan 2026</span>
+            <span class="bw-news-reading">3 min read</span>
+          </div>
+          <div class="bw-news-body">
+            <h3>Now booking weddings, events and corporate shoots for 2026.</h3>
+            <p>The 2026 booking calendar is open — early bookings receive a complimentary highlight reel.</p>
+          </div>
+          <span class="bw-news-arrow">→</span>
+        </a>
+
+        <!-- GROUP -->
+        <a href="#" class="bw-news-item bw-reveal" data-category="group">
+          <div class="bw-news-meta">
+            <span class="bw-news-cat">Group</span>
+            <span class="bw-news-date">15 Jan 2026</span>
+            <span class="bw-news-reading">3 min read</span>
+          </div>
+          <div class="bw-news-body">
+            <h3>Reflecting on a year of growth across all six businesses.</h3>
+            <p>From our first loan approval to our first brand film, it's been a year of quiet, steady progress — and we're only getting started.</p>
+          </div>
+          <span class="bw-news-arrow">→</span>
+        </a>
+
+      </div>
+
+      <!-- No results message -->
+      <div class="bw-no-results" id="noResults">
+        No stories in this category yet — check back soon.
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ NEWSLETTER ============ -->
+  <section class="bw-newsletter">
+    <div class="bw-newsletter-inner">
+      <h2>Stay in the loop.</h2>
+      <p>Subscribe to our newsletter for updates from across the group.</p>
+    <form
+  class="bw-newsletter-form"
+  id="newsletterForm"
+  action="https://formspree.io/f/xppqgdzz"
+  method="POST"
+>
+  <input
+    type="email"
+    name="email"
+    placeholder="Your email address"
+    required
+    aria-label="Email address"
+  />
+  <button type="submit" id="newsletterBtn">Subscribe</button>
+</form>
+<p class="bw-newsletter-msg" id="newsletterMsg" role="status" aria-live="polite"></p>
+    </div>
+  </section>
+
+  <!-- ============ BLACK FOOTER ============ -->
+  <footer class="footer">
+    <div class="container footer-grid">
+
+      <div>
+        <img src="Logo.png" alt="Mlotshwa Trading Co." class="footer-logo" />
+        <h3>Mlotshwa Trading Corporations</h3>
+        <p>Building businesses that shape us to build communities. Six ventures, one vision — proudly rooted in Durban, KwaZulu-Natal.</p>
+
+        <div class="footer-social">
+          <a href="#" aria-label="Facebook" title="Facebook">
+            <svg viewBox="0 0 24 24"><path d="M22 12a10 10 0 1 0-11.56 9.87v-6.99H7.9V12h2.54V9.8c0-2.51 1.5-3.89 3.78-3.89 1.1 0 2.24.2 2.24.2v2.46H15.2c-1.24 0-1.63.77-1.63 1.56V12h2.77l-.44 2.88h-2.33v6.99A10 10 0 0 0 22 12z"/></svg>
+          </a>
+          <a href="#" aria-label="Instagram" title="Instagram">
+            <svg viewBox="0 0 24 24"><path d="M12 2.16c3.2 0 3.58.01 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.25-2.23-.41a3.7 3.7 0 0 1-1.38-.9 3.7 3.7 0 0 1-.9-1.38c-.16-.42-.36-1.06-.41-2.23C2.17 15.58 2.16 15.2 2.16 12s.01-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41C8.42 2.17 8.8 2.16 12 2.16zm0 3.68A6.16 6.16 0 1 0 18.16 12 6.16 6.16 0 0 0 12 5.84zm0 10.16A4 4 0 1 1 16 12a4 4 0 0 1-4 4zm6.4-10.4a1.44 1.44 0 1 1-1.44-1.44 1.44 1.44 0 0 1 1.44 1.44z"/></svg>
+          </a>
+          <a href="#" aria-label="LinkedIn" title="LinkedIn">
+            <svg viewBox="0 0 24 24"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9h4v12H3V9zm7 0h3.8v1.7h.05a4.17 4.17 0 0 1 3.75-2.06c4 0 4.75 2.64 4.75 6.08V21h-4v-5.5c0-1.31-.03-3-1.83-3s-2.12 1.43-2.12 2.9V21h-4V9z"/></svg>
+          </a>
+          <a href="https://wa.me/27665686336" aria-label="WhatsApp" title="WhatsApp" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div>
+        <h4>Company</h4>
+        <ul>
+          <li><a href="about.html">About</a></li>
+          <li><a href="news.html">News</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4>Our Businesses</h4>
+        <ul>
+          <li><a href="business-family-trust.html">Family Trust</a></li>
+          <li><a href="business-shoe-wash.html">Shoe Wash</a></li>
+          <li><a href="business-ndabezitha.html">Ndabezitha Transportation</a></li>
+          <li><a href="business-precious-rentals.html">Precious Rentals</a></li>
+          <li><a href="business-banele-driving.html">Banele Driving</a></li>
+          <li><a href="business-mlotshwa-productions.html">Mlotshwa Productions</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4>Contact</h4>
+        <p>thandolwethumlotshwa6@gmail.com</p>
+        <p>066 568 6336</p>
+        <p>324 West Street, Durban</p>
+      </div>
+
+    </div>
+
+    <div class="container footer-bottom">
+      <p>© 2026 Mlotshwa Trading Corporations. All rights reserved. · <a href="privacy.html">Privacy Policy</a></p>
+      <p>Built in Durban, KwaZulu-Natal 🇿🇦</p>
+    </div>
+  </footer>
+
+  <!-- ============ WHATSAPP FLOAT ============ -->
+  <a href="https://wa.me/27665686336" class="whatsapp-float" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+    </svg>
+  </a>
+
+  <!-- ============ SCRIPTS ============ -->
+  <script>
+    /* Menu toggle */
+    (function () {
+      const toggle = document.getElementById('menuToggle');
+      const links  = document.getElementById('navLinks');
+      if (!toggle || !links) return;
+      toggle.addEventListener('click', () => links.classList.toggle('open'));
+    })();
+
+    /* Scroll reveal */
+    (function () {
+      const els = document.querySelectorAll('.bw-reveal');
+      if (!els.length) return;
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry, i) => {
+          if (entry.isIntersecting) {
+            setTimeout(() => {
+              entry.target.classList.add('is-visible');
+            }, i * 60);
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.08 });
+
+      els.forEach(el => observer.observe(el));
+    })();
+
+    /* Filter logic */
+    (function () {
+      const filterBtns = document.querySelectorAll('.bw-filter-btn');
+      const items = document.querySelectorAll('.bw-news-item');
+      const noResults = document.getElementById('noResults');
+      const storyCount = document.getElementById('storyCount');
+      if (!filterBtns.length) return;
+
+      filterBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          filterBtns.forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+
+          const filter = btn.dataset.filter;
+          let visible = 0;
+
+          items.forEach(item => {
+            const match = (filter === 'all') || (item.dataset.category === filter);
+            if (match) {
+              item.style.display = '';
+              item.classList.remove('is-visible');
+              void item.offsetWidth;
+              item.classList.add('is-visible');
+              visible++;
+            } else {
+              item.style.display = 'none';
+            }
+          });
+
+          if (noResults) {
+            noResults.classList.toggle('visible', visible === 0);
+          }
+          if (storyCount) {
+            storyCount.textContent = visible + ' ' + (visible === 1 ? 'Story' : 'Stories');
+          }
+        });
+      });
+    })();
+    /* Newsletter submission (Formspree) */
+(function () {
+  const form = document.getElementById('newsletterForm');
+  const btn  = document.getElementById('newsletterBtn');
+  const msg  = document.getElementById('newsletterMsg');
+  if (!form || !btn || !msg) return;
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+
+    const originalText = btn.textContent;
+    btn.disabled = true;
+    btn.textContent = 'Sending…';
+    msg.textContent = '';
+    msg.className = 'bw-newsletter-msg';
+
+    try {
+      const res = await fetch(form.action, {
+        method: 'POST',
+        body: new FormData(form),
+        headers: { 'Accept': 'application/json' }
+      });
+
+      if (res.ok) {
+        msg.textContent = "Thanks for subscribing! Check your inbox to confirm.";
+        msg.classList.add('is-success');
+        form.reset();
+      } else {
+        const data = await res.json().catch(() => ({}));
+        msg.textContent = data.errors?.[0]?.message || 'Something went wrong. Please try again.';
+        msg.classList.add('is-error');
+      }
+    } catch (err) {
+      msg.textContent = 'Network error. Please check your connection and try again.';
+      msg.classList.add('is-error');
+    } finally {
+      btn.disabled = false;
+      btn.textContent = originalText;
+    }
+  });
+})();
+  </script>
+  <script src="js/business-animations.js"></script>
+</body>
+</html>

@@ -1,0 +1,1456 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact — Mlotshwa Trading Corporations</title>
+  <meta name="description" content="Get in touch with Mlotshwa Trading Corporations. Call, WhatsApp, email, or send us a message — we're one message away." />
+  <link rel="icon" type="image/png" href="Logo.png" />
+
+  <meta property="og:title" content="Contact — Mlotshwa Trading Corporations" />
+  <meta property="og:description" content="Get in touch — we're one message away." />
+  <meta property="og:image" content="images/logo.png" />
+
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/animations.css" />
+
+  <style>
+    /* ================================================================
+       BLACK & WHITE — CONTACT PAGE
+       White header · Black footer
+       ================================================================ */
+
+    :root {
+      --bw-black: #0a0a0a;
+      --bw-ink: #111111;
+      --bw-gray-1: #1a1a1a;
+      --bw-gray-2: #2a2a2a;
+      --bw-gray-3: #6b6b6b;
+      --bw-gray-4: #a3a3a3;
+      --bw-gray-5: #d4d4d4;
+      --bw-gray-6: #f5f5f5;
+      --bw-gray-7: #fafafa;
+      --bw-white: #ffffff;
+      --bw-border: rgba(255, 255, 255, 0.14);
+      --bw-border-dark: rgba(0, 0, 0, 0.1);
+    }
+
+    body {
+      background: var(--bw-white);
+      color: var(--bw-ink);
+      font-family: system-ui, -apple-system, 'Inter', 'Segoe UI', Roboto, sans-serif;
+      margin: 0;
+    }
+
+    h1, h2, h3, h4 {
+      letter-spacing: -0.03em;
+      font-weight: 700;
+      color: var(--bw-ink);
+    }
+
+    /* ============ WHITE HEADER ============ */
+    .navbar {
+      background: var(--bw-white) !important;
+      border-bottom: 1px solid var(--bw-border-dark);
+      padding: 1.1rem 0;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .navbar .logo-text span:first-child {
+      color: var(--bw-black);
+      font-weight: 800;
+      letter-spacing: 0.02em;
+    }
+
+    .navbar .logo-text span:last-child {
+      color: var(--bw-gray-3);
+      font-weight: 400;
+      letter-spacing: 0.02em;
+    }
+
+    .navbar .nav-links a {
+      color: var(--bw-gray-3) !important;
+      font-weight: 500;
+      font-size: 0.9rem;
+      transition: color 0.25s ease;
+    }
+
+    .navbar .nav-links a:hover,
+    .navbar .nav-links a.active {
+      color: var(--bw-black) !important;
+    }
+
+    .navbar .menu-toggle span {
+      background: var(--bw-black) !important;
+    }
+
+    /* ============ HERO ============ */
+    .bw-hero {
+      background: var(--bw-black);
+      color: var(--bw-white);
+      position: relative;
+      overflow: hidden;
+      padding: 6rem 0 5rem;
+      min-height: 55vh;
+      display: flex;
+      align-items: center;
+    }
+
+    .bw-hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(255, 255, 255, 0.035) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.035) 1px, transparent 1px);
+      background-size: 80px 80px;
+      z-index: 1;
+      pointer-events: none;
+    }
+
+    .bw-hero::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at 50% 45%, transparent 15%, var(--bw-black) 82%);
+      z-index: 2;
+      pointer-events: none;
+    }
+
+    .bw-hero .container {
+      position: relative;
+      z-index: 3;
+    }
+
+    .bw-hero-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      color: var(--bw-gray-4);
+      font-size: 0.78rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      font-weight: 500;
+      margin-bottom: 1.75rem;
+    }
+
+    .bw-hero-eyebrow::before {
+      content: '';
+      width: 40px;
+      height: 1px;
+      background: var(--bw-gray-3);
+    }
+
+    .bw-hero h1 {
+      color: var(--bw-white);
+      font-size: clamp(2.4rem, 6vw, 4.2rem);
+      line-height: 1.05;
+      font-weight: 800;
+      letter-spacing: -0.045em;
+      margin: 0 0 1.25rem;
+      max-width: 16ch;
+    }
+
+    .bw-hero h1 .accent-line {
+      display: block;
+      color: var(--bw-gray-4);
+      font-weight: 300;
+      font-style: italic;
+    }
+
+    .bw-hero-tagline {
+      color: var(--bw-gray-4);
+      font-size: clamp(1rem, 1.5vw, 1.15rem);
+      line-height: 1.6;
+      max-width: 520px;
+      margin: 0;
+    }
+
+    /* ============ MAIN CONTACT LAYOUT ============ */
+    .bw-contact {
+      padding: 6rem 0;
+      background: var(--bw-white);
+    }
+
+    .bw-contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 5rem;
+      align-items: start;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    @media (max-width: 900px) {
+      .bw-contact-grid {
+        grid-template-columns: 1fr;
+        gap: 3.5rem;
+      }
+    }
+
+    /* ===== LEFT — FORM ===== */
+    .bw-form-head {
+      margin-bottom: 2.5rem;
+    }
+
+    .bw-form-head .bw-section-label {
+      font-size: 0.72rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--bw-gray-3);
+      font-weight: 600;
+      margin-bottom: 1rem;
+      display: inline-block;
+      padding-bottom: 0.4rem;
+      border-bottom: 1px solid var(--bw-gray-5);
+    }
+
+    .bw-form-head h2 {
+      font-size: clamp(1.6rem, 3vw, 2.2rem);
+      font-weight: 800;
+      letter-spacing: -0.035em;
+      margin: 0;
+      line-height: 1.15;
+      max-width: 20ch;
+    }
+
+    /* Form */
+    .bw-form {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+
+    .bw-field {
+      position: relative;
+    }
+
+    .bw-field label {
+      display: block;
+      font-size: 0.72rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--bw-gray-3);
+      font-weight: 600;
+      margin-bottom: 0.6rem;
+    }
+
+    .bw-field input,
+    .bw-field select,
+    .bw-field textarea {
+      width: 100%;
+      padding: 0.9rem 0;
+      border: none;
+      border-bottom: 1.5px solid var(--bw-gray-5);
+      background: transparent;
+      color: var(--bw-ink);
+      font-size: 1rem;
+      font-family: inherit;
+      outline: none;
+      transition: border-color 0.3s ease;
+      border-radius: 0;
+      -webkit-appearance: none;
+      appearance: none;
+    }
+
+    .bw-field textarea {
+      resize: vertical;
+      min-height: 120px;
+      padding-top: 0.9rem;
+    }
+
+    .bw-field input:focus,
+    .bw-field select:focus,
+    .bw-field textarea:focus {
+      border-bottom-color: var(--bw-black);
+    }
+
+    .bw-field input::placeholder,
+    .bw-field textarea::placeholder {
+      color: var(--bw-gray-4);
+      font-size: 0.98rem;
+    }
+
+    .bw-field select {
+      cursor: pointer;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath fill='none' stroke='%23666' stroke-width='1.5' d='M1 1l5 5 5-5'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right 0.5rem center;
+      padding-right: 2rem;
+    }
+
+    /* Honeypot hidden field */
+    .bw-hp {
+      position: absolute;
+      left: -9999px;
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    /* Submit button */
+    .bw-submit {
+      margin-top: 1rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.7rem;
+      padding: 1.05rem 2rem;
+      background: var(--bw-black);
+      color: var(--bw-white);
+      border: 1.5px solid var(--bw-black);
+      font-size: 0.9rem;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+      cursor: pointer;
+      font-family: inherit;
+      align-self: flex-start;
+      transition: background 0.3s ease, color 0.3s ease, transform 0.3s ease;
+    }
+
+    .bw-submit:hover {
+      background: transparent;
+      color: var(--bw-black);
+      transform: translateY(-2px);
+    }
+
+    .bw-submit .arrow {
+      transition: transform 0.3s ease;
+    }
+
+    .bw-submit:hover .arrow {
+      transform: translateX(4px);
+    }
+
+    /* Success message */
+    .bw-success {
+      display: none;
+      padding: 1.25rem 1.5rem;
+      background: var(--bw-black);
+      color: var(--bw-white);
+      border-left: 3px solid var(--bw-white);
+      font-size: 0.95rem;
+      line-height: 1.6;
+      margin-top: 1rem;
+    }
+
+    .bw-success.visible {
+      display: block;
+      animation: slideIn 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+
+    @keyframes slideIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* ===== RIGHT — CONTACT INFO ===== */
+    .bw-info-head {
+      margin-bottom: 2.5rem;
+    }
+
+    .bw-info-head h2 {
+      font-size: clamp(1.6rem, 3vw, 2.2rem);
+      font-weight: 800;
+      letter-spacing: -0.035em;
+      margin: 0 0 0.75rem;
+      line-height: 1.15;
+    }
+
+    .bw-info-head p {
+      color: var(--bw-gray-3);
+      font-size: 0.98rem;
+      line-height: 1.6;
+      margin: 0;
+    }
+
+    /* Contact items */
+    .bw-contact-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+      border-top: 1px solid var(--bw-border-dark);
+      margin-bottom: 2.5rem;
+    }
+
+    .bw-contact-item {
+      display: grid;
+      grid-template-columns: 90px 1fr;
+      gap: 1.5rem;
+      padding: 1.5rem 0;
+      border-bottom: 1px solid var(--bw-border-dark);
+      align-items: start;
+      transition: padding 0.3s ease;
+    }
+
+    .bw-contact-item:hover {
+      padding-left: 0.75rem;
+    }
+
+    .bw-contact-label {
+      font-size: 0.7rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--bw-gray-3);
+      font-weight: 600;
+      padding-top: 0.2rem;
+    }
+
+    .bw-contact-value {
+      color: var(--bw-ink);
+      font-size: 1rem;
+      line-height: 1.5;
+      text-decoration: none;
+      word-break: break-word;
+      transition: color 0.25s ease;
+      display: block;
+    }
+
+    .bw-contact-value strong {
+      font-weight: 600;
+      color: var(--bw-black);
+    }
+
+    .bw-contact-value a {
+      color: var(--bw-ink);
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.25s ease;
+    }
+
+    .bw-contact-value a:hover {
+      border-bottom-color: var(--bw-ink);
+    }
+
+    .bw-contact-value .small {
+      display: block;
+      color: var(--bw-gray-3);
+      font-size: 0.85rem;
+      margin-top: 0.3rem;
+    }
+
+    /* WhatsApp callout */
+    .bw-whatsapp-callout {
+      display: block;
+      padding: 1.5rem 1.75rem;
+      background: var(--bw-gray-7);
+      border-left: 3px solid var(--bw-black);
+      text-decoration: none;
+      color: inherit;
+      transition: background 0.3s ease, transform 0.3s ease;
+      margin-top: 1.5rem;
+    }
+
+    .bw-whatsapp-callout:hover {
+      background: var(--bw-gray-6);
+      transform: translateY(-3px);
+    }
+
+    .bw-whatsapp-callout .label {
+      font-size: 0.68rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--bw-gray-3);
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+      display: block;
+    }
+
+    .bw-whatsapp-callout .title {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--bw-ink);
+      margin: 0 0 0.35rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .bw-whatsapp-callout .arrow {
+      transition: transform 0.3s ease;
+      display: inline-block;
+    }
+
+    .bw-whatsapp-callout:hover .arrow {
+      transform: translateX(6px);
+    }
+
+    .bw-whatsapp-callout .sub {
+      color: var(--bw-gray-3);
+      font-size: 0.88rem;
+      margin: 0;
+      line-height: 1.5;
+    }
+
+    /* ============ HOURS + LOCATION STRIP ============ */
+    .bw-info-strip {
+      padding: 6rem 0;
+      background: var(--bw-gray-7);
+      border-top: 1px solid var(--bw-border-dark);
+      border-bottom: 1px solid var(--bw-border-dark);
+    }
+
+    .bw-info-strip-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    @media (max-width: 800px) {
+      .bw-info-strip-grid {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+      }
+    }
+
+    .bw-info-block h3 {
+      font-size: 1.35rem;
+      font-weight: 700;
+      letter-spacing: -0.03em;
+      margin: 0 0 0.75rem;
+    }
+
+    .bw-info-block > p {
+      color: var(--bw-gray-3);
+      font-size: 0.98rem;
+      line-height: 1.65;
+      margin: 0 0 1.75rem;
+    }
+
+    /* Hours list */
+    .bw-hours-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      border-top: 1px solid var(--bw-border-dark);
+    }
+
+    .bw-hours-list li {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.9rem 0;
+      border-bottom: 1px solid var(--bw-border-dark);
+      font-size: 0.95rem;
+    }
+
+    .bw-hours-list li .day {
+      color: var(--bw-gray-3);
+      font-weight: 500;
+    }
+
+    .bw-hours-list li .time {
+      color: var(--bw-ink);
+      font-weight: 600;
+      font-variant-numeric: tabular-nums;
+    }
+
+    .bw-hours-list li .closed {
+      color: var(--bw-gray-4);
+      font-weight: 500;
+    }
+
+    /* Location block */
+    .bw-location-address {
+      font-size: 1.05rem;
+      line-height: 1.6;
+      color: var(--bw-ink);
+      font-weight: 500;
+      margin: 0 0 1.25rem;
+    }
+
+    .bw-location-meta {
+      color: var(--bw-gray-3);
+      font-size: 0.9rem;
+      line-height: 1.6;
+      margin: 0 0 1.75rem;
+    }
+
+    .bw-map-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.82rem;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--bw-ink);
+      border-bottom: 1px solid var(--bw-ink);
+      padding-bottom: 0.3rem;
+      text-decoration: none;
+      transition: gap 0.3s ease;
+    }
+
+    .bw-map-link:hover {
+      gap: 0.8rem;
+    }
+
+    /* ============ BUSINESS DIRECTORY ============ */
+    .bw-directory {
+      padding: 6rem 0;
+      background: var(--bw-white);
+    }
+
+    .bw-section-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      margin-bottom: 3rem;
+      gap: 2rem;
+      flex-wrap: wrap;
+      border-bottom: 1px solid var(--bw-border-dark);
+      padding-bottom: 1.5rem;
+    }
+
+    .bw-section-head h2 {
+      font-size: clamp(1.7rem, 3.2vw, 2.4rem);
+      font-weight: 800;
+      letter-spacing: -0.035em;
+      margin: 0;
+      max-width: 22ch;
+      line-height: 1.15;
+    }
+
+    .bw-section-head .bw-count {
+      font-size: 0.75rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--bw-gray-3);
+      font-weight: 500;
+      white-space: nowrap;
+      padding-bottom: 0.5rem;
+    }
+
+    .bw-dir-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 0;
+      border: 1px solid var(--bw-border-dark);
+    }
+
+    .bw-dir-item {
+      padding: 2rem 1.75rem;
+      background: var(--bw-white);
+      text-decoration: none;
+      color: inherit;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      min-height: 220px;
+      transition: background 0.35s ease, color 0.35s ease;
+      border-right: 1px solid var(--bw-border-dark);
+      border-bottom: 1px solid var(--bw-border-dark);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .bw-dir-grid > .bw-dir-item:last-child {
+      border-right: none;
+    }
+
+    .bw-dir-item:hover {
+      background: var(--bw-black);
+      color: var(--bw-white);
+    }
+
+    .bw-dir-num {
+      font-size: 0.7rem;
+      letter-spacing: 0.2em;
+      color: var(--bw-gray-3);
+      font-weight: 600;
+      margin-bottom: 1rem;
+      transition: color 0.35s ease;
+    }
+
+    .bw-dir-item:hover .bw-dir-num {
+      color: var(--bw-gray-4);
+    }
+
+    .bw-dir-item h3 {
+      font-size: 1.15rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      margin: 0 0 0.6rem;
+      line-height: 1.25;
+      transition: color 0.35s ease;
+    }
+
+    .bw-dir-item:hover h3 {
+      color: var(--bw-white);
+    }
+
+    .bw-dir-item p {
+      color: var(--bw-gray-3);
+      font-size: 0.88rem;
+      line-height: 1.5;
+      margin: 0;
+      transition: color 0.35s ease;
+    }
+
+    .bw-dir-item:hover p {
+      color: var(--bw-gray-4);
+    }
+
+    .bw-dir-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: var(--bw-ink);
+      border-bottom: 1px solid currentColor;
+      padding-bottom: 0.25rem;
+      align-self: flex-start;
+      margin-top: 1.25rem;
+      transition: color 0.35s ease, gap 0.3s ease;
+    }
+
+    .bw-dir-item:hover .bw-dir-link {
+      color: var(--bw-white);
+      gap: 0.7rem;
+    }
+
+    @media (max-width: 700px) {
+      .bw-dir-item { border-right: none; }
+    }
+
+    /* ============ CTA ============ */
+    .bw-cta {
+      padding: 7rem 0;
+      background: var(--bw-black);
+      color: var(--bw-white);
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .bw-cta::before {
+      content: '';
+      position: absolute;
+      top: -30%;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 700px;
+      height: 700px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(255, 255, 255, 0.05), transparent 70%);
+      pointer-events: none;
+    }
+
+    .bw-cta-inner {
+      position: relative;
+      z-index: 1;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    .bw-cta h2 {
+      color: var(--bw-white);
+      font-size: clamp(1.9rem, 4vw, 2.8rem);
+      font-weight: 800;
+      letter-spacing: -0.04em;
+      line-height: 1.1;
+      margin: 0 0 1rem;
+    }
+
+    .bw-cta p {
+      color: var(--bw-gray-4);
+      font-size: 1.05rem;
+      line-height: 1.6;
+      margin: 0 0 2rem;
+    }
+
+    .bw-btn-row {
+      display: flex;
+      gap: 0.85rem;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .bw-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      padding: 1rem 1.9rem;
+      font-size: 0.9rem;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+      text-decoration: none;
+      border-radius: 0;
+      transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1),
+                  background 0.3s ease,
+                  color 0.3s ease;
+      cursor: pointer;
+      border: 1.5px solid transparent;
+    }
+
+    .bw-btn-primary {
+      background: var(--bw-white);
+      color: var(--bw-black);
+    }
+
+    .bw-btn-primary:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 15px 40px rgba(255, 255, 255, 0.15);
+    }
+
+    .bw-btn-secondary {
+      background: transparent;
+      color: var(--bw-white);
+      border-color: rgba(255, 255, 255, 0.35);
+    }
+
+    .bw-btn-secondary:hover {
+      background: var(--bw-white);
+      color: var(--bw-black);
+      transform: translateY(-3px);
+      border-color: var(--bw-white);
+    }
+
+    /* ============ BLACK FOOTER ============ */
+    .footer {
+      background: var(--bw-black);
+      color: var(--bw-gray-4);
+      border-top: 1px solid var(--bw-border);
+      padding: 5rem 0 2rem;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1.2fr;
+      gap: 3rem;
+      margin-bottom: 3rem;
+    }
+
+    @media (max-width: 900px) {
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 2.5rem;
+      }
+    }
+
+    @media (max-width: 560px) {
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+.footer-logo {
+  height: 60px;
+  width: auto;
+  margin-bottom: 1rem;
+  background: white;
+  padding: 0.6rem 0.9rem;
+  border-radius: 8px;
+  display: block;
+    }
+
+    .footer h3 {
+      color: var(--bw-white);
+      font-weight: 700;
+      font-size: 1.1rem;
+      letter-spacing: -0.02em;
+      margin: 0 0 0.75rem;
+    }
+
+    .footer h4 {
+      font-size: 0.72rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--bw-gray-4);
+      margin: 0 0 1.25rem;
+      font-weight: 600;
+    }
+
+    .footer p,
+    .footer a,
+    .footer li {
+      color: var(--bw-gray-4);
+      font-size: 0.9rem;
+      line-height: 1.7;
+    }
+
+    .footer p {
+      margin: 0 0 0.5rem;
+    }
+
+    .footer ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .footer li {
+      margin-bottom: 0.6rem;
+    }
+
+    .footer a {
+      text-decoration: none;
+      transition: color 0.25s ease, padding-left 0.25s ease;
+      display: inline-block;
+    }
+
+    .footer a:hover {
+      color: var(--bw-white);
+      padding-left: 4px;
+    }
+
+    .footer-social {
+      display: flex;
+      gap: 0.6rem;
+      margin-top: 1.25rem;
+    }
+
+    .footer-social a {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      border: 1px solid var(--bw-border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0;
+      transition: background 0.3s ease, border-color 0.3s ease, transform 0.3s ease;
+    }
+
+    .footer-social a:hover {
+      background: var(--bw-white);
+      border-color: var(--bw-white);
+      transform: translateY(-3px);
+      padding-left: 0;
+    }
+
+    .footer-social svg {
+      width: 15px;
+      height: 15px;
+      fill: var(--bw-gray-4);
+      transition: fill 0.3s ease;
+    }
+
+    .footer-social a:hover svg {
+      fill: var(--bw-black);
+    }
+
+    .footer-bottom {
+      border-top: 1px solid var(--bw-border);
+      margin-top: 2rem;
+      padding-top: 1.75rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .footer-bottom p {
+      font-size: 0.78rem;
+      color: var(--bw-gray-3);
+      margin: 0;
+      letter-spacing: 0.02em;
+    }
+
+    .footer-bottom a {
+      color: var(--bw-gray-3);
+    }
+
+    .footer-bottom a:hover {
+      color: var(--bw-white);
+      padding-left: 0;
+    }
+
+    /* ============ WhatsApp float ============ */
+    .whatsapp-float {
+      background: var(--bw-black) !important;
+      color: var(--bw-white) !important;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25) !important;
+    }
+
+    .whatsapp-float svg {
+      fill: var(--bw-white) !important;
+    }
+
+    /* ============ Reveal ============ */
+    .bw-reveal {
+      opacity: 0;
+      transform: translateY(28px);
+      transition: opacity 0.8s cubic-bezier(0.22, 1, 0.36, 1),
+                  transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+
+    .bw-reveal.is-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ============ WHITE HEADER ============ -->
+  <header class="navbar">
+    <div class="container nav-inner">
+      <a href="index.html" class="logo">
+        <img src="Logo.png" alt="Mlotshwa Trading Co." />
+        <span class="logo-text">
+          <span>MLOTSHWA</span>
+          <span>Trading Co.</span>
+        </span>
+      </a>
+      <nav>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="businesses.html">Businesses</a></li>
+          <li><a href="news.html">News</a></li>
+          <li><a href="contact.html" class="active">Contact</a></li>
+        </ul>
+      </nav>
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ============ HERO ============ -->
+  <section class="bw-hero">
+    <div class="container">
+      <div class="bw-hero-eyebrow">Get in Touch</div>
+      <h1>
+        Let's talk.<br />
+        <span class="accent-line">We're here.</span>
+      </h1>
+      <p class="bw-hero-tagline">
+        Whether you need a service, a partner, or just a chat — reach out
+        and we'll get back to you fast.
+      </p>
+    </div>
+  </section>
+
+  <!-- ============ MAIN CONTACT ============ -->
+  <section class="bw-contact">
+    <div class="container">
+      <div class="bw-contact-grid">
+
+        <!-- LEFT — FORM -->
+        <div class="bw-reveal">
+          <div class="bw-form-head">
+            <span class="bw-section-label">Send a Message</span>
+            <h2>Tell us what you need — we'll respond within 24 hours.</h2>
+          </div>
+
+          <form class="bw-form"
+      id="contactForm"
+      action="https://formspree.io/f/xrperjaw"
+      method="POST">
+
+  <input type="hidden" name="_next" value="/contact.html?sent=1" />
+  <input type="hidden" name="_subject" value="New enquiry from Mlotshwa website" />
+
+  <div class="bw-field">
+    <label for="name">Full Name</label>
+    <input type="text" id="name" name="name" placeholder="e.g. Sipho Dlamini" required />
+  </div>
+
+  <div class="bw-field">
+    <label for="email">Email Address</label>
+    <input type="email" id="email" name="email" placeholder="you@example.com" required />
+  </div>
+
+  <div class="bw-field">
+    <label for="phone">Phone Number</label>
+    <input type="tel" id="phone" name="phone" placeholder="066 568 6336" />
+  </div>
+
+  <div class="bw-field">
+    <label for="business">Which Business?</label>
+    <select id="business" name="business" required>
+      <option value="">— Select a business —</option>
+      <option value="family-trust">Family Trust — Financial Services</option>
+      <option value="shoe-wash">Shoe Wash — Shoe Cleaning</option>
+      <option value="ndabezitha">Ndabezitha Transportation</option>
+      <option value="precious-rentals">Precious Rentals</option>
+      <option value="banele-driving">Banele Driving</option>
+      <option value="mlotshwa-productions">Mlotshwa Productions</option>
+      <option value="general">General Enquiry</option>
+    </select>
+  </div>
+
+  <div class="bw-field">
+    <label for="message">Your Message</label>
+    <textarea id="message" name="message" placeholder="Tell us what you need..." required></textarea>
+  </div>
+
+  <!-- Honeypot (spam trap — hidden) -->
+  <input type="text" name="_gotcha" style="display:none !important;" tabindex="-1" autocomplete="off" />
+
+  <button type="submit" class="bw-submit">
+    Send Message <span class="arrow">→</span>
+  </button>
+
+  <div class="bw-success" id="formSuccess">
+    ✓ Thank you. Your message has been sent — we'll be in touch shortly.
+  </div>
+</form>
+        </div>
+
+        <!-- RIGHT — CONTACT INFO -->
+        <div class="bw-reveal">
+          <div class="bw-info-head">
+            <h2>Other ways to reach us.</h2>
+            <p>Prefer to call, WhatsApp, or email directly? All our details are below.</p>
+          </div>
+
+          <div class="bw-contact-list">
+
+            <div class="bw-contact-item">
+              <div class="bw-contact-label">Phone</div>
+              <div class="bw-contact-value">
+                <a href="tel:+27665686336"><strong>066 568 6336</strong></a>
+                <span class="small">Mon – Fri · 8:00 – 17:00</span>
+              </div>
+            </div>
+
+            <div class="bw-contact-item">
+              <div class="bw-contact-label">Email</div>
+              <div class="bw-contact-value">
+                <a href="mailto:thandolwethumlotshwa6@gmail.com">thandolwethumlotshwa6@gmail.com</a>
+                <span class="small">We reply within 24 hours</span>
+              </div>
+            </div>
+
+            <div class="bw-contact-item">
+              <div class="bw-contact-label">Office</div>
+              <div class="bw-contact-value">
+                <strong>324 West Street</strong>
+                <span class="small">Durban Central, KwaZulu-Natal, 4001</span>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- WhatsApp callout -->
+          <a href="https://wa.me/27665686336?text=Hi%20Mlotshwa%20Trading%20Co.%2C%20I'd%20like%20to%20enquire%20about%20your%20services."
+             class="bw-whatsapp-callout"
+             target="_blank"
+             rel="noopener">
+            <span class="label">Fastest Response</span>
+            <p class="title">
+              Chat with us on WhatsApp <span class="arrow">→</span>
+            </p>
+            <p class="sub">We typically respond within minutes during business hours.</p>
+          </a>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ HOURS + LOCATION ============ -->
+  <section class="bw-info-strip">
+    <div class="container">
+      <div class="bw-info-strip-grid">
+
+        <!-- HOURS -->
+        <div class="bw-info-block bw-reveal">
+          <h3>Business Hours</h3>
+          <p>Our office is open throughout the work week. WhatsApp is monitored outside hours for urgent enquiries.</p>
+
+          <ul class="bw-hours-list">
+            <li><span class="day">Monday</span><span class="time">08:00 – 17:00</span></li>
+            <li><span class="day">Tuesday</span><span class="time">08:00 – 17:00</span></li>
+            <li><span class="day">Wednesday</span><span class="time">08:00 – 17:00</span></li>
+            <li><span class="day">Thursday</span><span class="time">08:00 – 17:00</span></li>
+            <li><span class="day">Friday</span><span class="time">08:00 – 16:00</span></li>
+            <li><span class="day">Saturday</span><span class="time">09:00 – 13:00</span></li>
+            <li><span class="day">Sunday</span><span class="closed">Closed</span></li>
+          </ul>
+        </div>
+
+        <!-- LOCATION -->
+        <div class="bw-info-block bw-reveal">
+          <h3>Our Location</h3>
+          <p>Find us in the heart of Durban's business district. Walk-ins welcome during business hours.</p>
+
+          <p class="bw-location-address">
+            <strong>Mlotshwa Trading Corporations</strong><br />
+            324 West Street<br />
+            Durban Central<br />
+            KwaZulu-Natal, 4001<br />
+            South Africa
+          </p>
+
+          <p class="bw-location-meta">
+            📍 Close to Durban Station<br />
+            🚗 Street parking nearby<br />
+            ♿ Ground floor access
+          </p>
+
+          <a href="https://maps.google.com/?q=324+West+Street+Durban" target="_blank" rel="noopener" class="bw-map-link">
+            Open in Google Maps →
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ DIRECTORY ============ -->
+  <section class="bw-directory">
+    <div class="container">
+      <div class="bw-section-head bw-reveal">
+        <h2>Contact a specific business.</h2>
+        <div class="bw-count">Six / Six</div>
+      </div>
+
+      <div class="bw-dir-grid">
+
+        <a href="business-family-trust.html" class="bw-dir-item bw-reveal">
+          <div>
+            <div class="bw-dir-num">01 / Financial</div>
+            <h3>Family Trust</h3>
+            <p>Loans, financial advisory, and business funding.</p>
+          </div>
+          <span class="bw-dir-link">Visit →</span>
+        </a>
+
+        <a href="business-shoe-wash.html" class="bw-dir-item bw-reveal">
+          <div>
+            <div class="bw-dir-num">02 / Shoe Care</div>
+            <h3>Shoe Wash</h3>
+            <p>Cleaning, restoration, and protection for footwear.</p>
+          </div>
+          <span class="bw-dir-link">Visit →</span>
+        </a>
+
+        <a href="business-ndabezitha.html" class="bw-dir-item bw-reveal">
+          <div>
+            <div class="bw-dir-num">03 / Transport</div>
+            <h3>Ndabezitha Transportation</h3>
+            <p>Freight, courier, and passenger transport across KZN.</p>
+          </div>
+          <span class="bw-dir-link">Visit →</span>
+        </a>
+
+        <a href="business-precious-rentals.html" class="bw-dir-item bw-reveal">
+          <div>
+            <div class="bw-dir-num">04 / Property</div>
+            <h3>Precious Rentals</h3>
+            <p>Residential and commercial rental properties in Durban.</p>
+          </div>
+          <span class="bw-dir-link">Visit →</span>
+        </a>
+
+        <a href="business-banele-driving.html" class="bw-dir-item bw-reveal">
+          <div>
+            <div class="bw-dir-num">05 / Education</div>
+            <h3>Banele Driving</h3>
+            <p>Driving lessons and K53 test preparation.</p>
+          </div>
+          <span class="bw-dir-link">Visit →</span>
+        </a>
+
+        <a href="business-mlotshwa-productions.html" class="bw-dir-item bw-reveal">
+          <div>
+            <div class="bw-dir-num">06 / Creative</div>
+            <h3>Mlotshwa Productions</h3>
+            <p>Videography, photography, and creative media.</p>
+          </div>
+          <span class="bw-dir-link">Visit →</span>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CTA ============ -->
+  <section class="bw-cta">
+    <div class="bw-cta-inner">
+      <h2>Prefer to talk? Call us directly.</h2>
+      <p>Our team is ready to help — whatever you need, we'll point you in the right direction.</p>
+      <div class="bw-btn-row">
+        <a href="tel:+27665686336" class="bw-btn bw-btn-primary">
+          Call 066 568 6336 <span>→</span>
+        </a>
+        <a href="https://wa.me/27665686336" class="bw-btn bw-btn-secondary" target="_blank" rel="noopener">
+          WhatsApp Us
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ BLACK FOOTER ============ -->
+  <footer class="footer">
+    <div class="container footer-grid">
+
+      <div>
+        <img src="Logo.png" alt="Mlotshwa Trading Co." class="footer-logo" />
+        <h3>Mlotshwa Trading Corporations</h3>
+        <p>Building businesses that shape us to build communities. Six ventures, one vision — proudly rooted in Durban, KwaZulu-Natal.</p>
+
+        <div class="footer-social">
+          <a href="#" aria-label="Facebook" title="Facebook">
+            <svg viewBox="0 0 24 24"><path d="M22 12a10 10 0 1 0-11.56 9.87v-6.99H7.9V12h2.54V9.8c0-2.51 1.5-3.89 3.78-3.89 1.1 0 2.24.2 2.24.2v2.46H15.2c-1.24 0-1.63.77-1.63 1.56V12h2.77l-.44 2.88h-2.33v6.99A10 10 0 0 0 22 12z"/></svg>
+          </a>
+          <a href="#" aria-label="Instagram" title="Instagram">
+            <svg viewBox="0 0 24 24"><path d="M12 2.16c3.2 0 3.58.01 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.25-2.23-.41a3.7 3.7 0 0 1-1.38-.9 3.7 3.7 0 0 1-.9-1.38c-.16-.42-.36-1.06-.41-2.23C2.17 15.58 2.16 15.2 2.16 12s.01-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41C8.42 2.17 8.8 2.16 12 2.16zm0 3.68A6.16 6.16 0 1 0 18.16 12 6.16 6.16 0 0 0 12 5.84zm0 10.16A4 4 0 1 1 16 12a4 4 0 0 1-4 4zm6.4-10.4a1.44 1.44 0 1 1-1.44-1.44 1.44 1.44 0 0 1 1.44 1.44z"/></svg>
+          </a>
+          <a href="#" aria-label="LinkedIn" title="LinkedIn">
+            <svg viewBox="0 0 24 24"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9h4v12H3V9zm7 0h3.8v1.7h.05a4.17 4.17 0 0 1 3.75-2.06c4 0 4.75 2.64 4.75 6.08V21h-4v-5.5c0-1.31-.03-3-1.83-3s-2.12 1.43-2.12 2.9V21h-4V9z"/></svg>
+          </a>
+          <a href="https://wa.me/27665686336" aria-label="WhatsApp" title="WhatsApp" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div>
+        <h4>Company</h4>
+        <ul>
+          <li><a href="about.html">About</a></li>
+          <li><a href="news.html">News</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4>Our Businesses</h4>
+        <ul>
+          <li><a href="business-family-trust.html">Family Trust</a></li>
+          <li><a href="business-shoe-wash.html">Shoe Wash</a></li>
+          <li><a href="business-ndabezitha.html">Ndabezitha Transportation</a></li>
+          <li><a href="business-precious-rentals.html">Precious Rentals</a></li>
+          <li><a href="business-banele-driving.html">Banele Driving</a></li>
+          <li><a href="business-mlotshwa-productions.html">Mlotshwa Productions</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4>Contact</h4>
+        <p>thandolwethumlotshwa6@gmail.com</p>
+        <p>066 568 6336</p>
+        <p>324 West Street, Durban</p>
+      </div>
+
+    </div>
+
+    <div class="container footer-bottom">
+      <p>© 2026 Mlotshwa Trading Corporations. All rights reserved. · <a href="privacy.html">Privacy Policy</a></p>
+      <p>Built in Durban, KwaZulu-Natal 🇿🇦</p>
+    </div>
+  </footer>
+
+  <!-- ============ WHATSAPP FLOAT ============ -->
+  <a href="https://wa.me/27665686336" class="whatsapp-float" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+    </svg>
+  </a>
+
+<!-- ============ SCRIPTS ============ -->
+<script>
+  /* ---------- Menu toggle ---------- */
+  (function () {
+    const toggle = document.getElementById('menuToggle');
+    const links  = document.getElementById('navLinks');
+    if (!toggle || !links) return;
+    toggle.addEventListener('click', () => links.classList.toggle('open'));
+  })();
+
+  /* ---------- Scroll reveal ---------- */
+  (function () {
+    const els = document.querySelectorAll('.bw-reveal');
+    if (!els.length) return;
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry, i) => {
+        if (entry.isIntersecting) {
+          setTimeout(() => {
+            entry.target.classList.add('is-visible');
+          }, i * 80);
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
+
+    els.forEach(el => observer.observe(el));
+  })();
+
+  /* ---------- Contact form ---------- */
+  (function () {
+    const form = document.getElementById('contactForm');
+    const success = document.getElementById('formSuccess');
+    if (!form) return;
+
+    /* 1. Clear the form immediately when submit is clicked
+          (do NOT preventDefault — Formspree needs the native submit) */
+    form.addEventListener('submit', () => {
+      setTimeout(() => {
+        form.reset();
+        // Also clear the "which business" select back to placeholder
+        const sel = form.querySelector('select');
+        if (sel) sel.selectedIndex = 0;
+      }, 0);
+    });
+
+    /* 2. On page load — if the URL has ?sent=1, it means the user
+          just came back from Formspree. Clear everything again
+          (in case the browser restored cached values) and show success. */
+    if (window.location.search.indexOf('sent=1') !== -1) {
+
+      // Clear the form completely
+      form.reset();
+      const sel = form.querySelector('select');
+      if (sel) sel.selectedIndex = 0;
+
+      // Clear every input explicitly (belt & braces — for browsers that ignore reset)
+      form.querySelectorAll('input, textarea, select').forEach((field) => {
+        if (field.type === 'hidden') return;
+        if (field.type === 'checkbox' || field.type === 'radio') {
+          field.checked = false;
+        } else if (field.tagName === 'SELECT') {
+          field.selectedIndex = 0;
+        } else {
+          field.value = '';
+        }
+      });
+
+      // Show success message
+      if (success) {
+        success.classList.add('visible');
+        setTimeout(() => success.classList.remove('visible'), 8000);
+      }
+
+      // Clean the URL so refresh doesn't re-show anything
+      if (window.history.replaceState) {
+        window.history.replaceState({}, '', window.location.pathname);
+      }
+    }
+  })();
+
+  /* ---------- Prevent browser from restoring form values on back/forward ---------- */
+  window.addEventListener('pageshow', function (event) {
+    const form = document.getElementById('contactForm');
+    if (!form) return;
+    // If the page was restored from cache (back button), clear the form
+    if (event.persisted || performance.getEntriesByType('navigation')[0]?.type === 'back_forward') {
+      form.reset();
+      form.querySelectorAll('input, textarea, select').forEach((field) => {
+        if (field.type === 'hidden') return;
+        if (field.type === 'checkbox' || field.type === 'radio') {
+          field.checked = false;
+        } else if (field.tagName === 'SELECT') {
+          field.selectedIndex = 0;
+        } else {
+          field.value = '';
+        }
+      });
+    }
+  });
+</script>
+<script src="js/business-animations.js"></script>
+</body>
+</html>
